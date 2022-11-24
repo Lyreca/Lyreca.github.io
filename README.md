@@ -1,3 +1,3 @@
 # Lyreca.github.io
 
-Website for my resum/portfolio
+Website for my resume/portfolio
