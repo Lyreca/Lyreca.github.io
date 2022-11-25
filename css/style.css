@@ -134,6 +134,13 @@ h1 {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  
+
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
 }
 
 #buttons a {
@@ -152,7 +159,7 @@ a:hover {
 
 ::-webkit-scrollbar {
     width: 0px;
-    height: 0px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -172,16 +179,10 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    height: 100%;
+
     scroll-snap-align: center;
-    scroll-behavior: smooth;
-
-    transition: transform 0.5s;
 }
 
-.slide:target {
-    transform: scale(0.98);
-}
 
 /* Slides */
 #slide1 {
