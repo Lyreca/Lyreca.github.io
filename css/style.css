@@ -343,6 +343,14 @@ a:hover {
         font-size: 6vw;
     }
 
+    h2 {
+        font-size: 5vw !important;
+    }
+
+    h3 {
+        font-size: 4.5vw !important;
+    }
+
     #c p {
         font-size: 4vw;
     }
