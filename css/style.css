@@ -195,12 +195,12 @@ a:hover {
     flex-direction: row;
 }
 
-#slide2 h2 {
+h2 {
     font-weight: bold;
     font-size: 1.8em;
 }
 
-#slide2 h3 {
+h3 {
     font-weight: normal;
     font-size: 1.3em;
 }
@@ -215,6 +215,10 @@ a:hover {
 
 #slide5 {
   flex-direction: row;
+}
+
+#slide5 table td {
+  padding: 5px;
 }
 
 /* Classes */
