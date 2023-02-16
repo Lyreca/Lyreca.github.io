@@ -206,19 +206,35 @@ h3 {
 }
 
 #slide3 {
-  flex-direction: row;
+    flex-direction: row;
+}
+
+#slide3 h1{
+    font-size: 2em;
+}
+
+#slide3 h2{
+    font-size: 1.4em;
+}
+
+#slide3 h3 {
+    font-size: 1.3em;
+}
+
+#slide3 p {
+    font-size: 1.3em;
 }
 
 #slide4 {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 #slide5 {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 #slide5 table td {
-  padding: 5px;
+    padding: 5px;
 }
 
 /* Classes */
