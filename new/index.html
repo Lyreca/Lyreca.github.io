@@ -1,224 +1,283 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Frans Santoso</title>
-<meta charset="UTF-8">
-<meta name="description" content="">
-<meta name="keywords" content="">
+  <title>Frans Santoso</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-<!-- Set View Size -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set View Size -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Stylesheets -->
-<link href="library/styles/destyle.css" rel="stylesheet">
-<link href="library/styles/style.css" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link href="library/styles/destyle.css" rel="stylesheet">
+  <link href="library/styles/style.css" rel="stylesheet">
 
-<!-- Google Font(s) -->
-<style>
+  <!-- Google Font(s) -->
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Ubuntu+Mono&display=swap');
-</style>
-<!-- Favicon -->
-<link rel="icon" href="favicon/favicon.png" type="image/png" sizes="16x16">
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" href="library/images/favicon/favicon.png" type="image/png" sizes="16x16">
 </head>
+
 <body>
 
-<div id="container">
+  <div class="container">
 
-    <div id="title" class="middle">
-        <h1>Frans Santoso</h1>
-        <h2>Portfolio</h2>
-    </div>
+    <section class="header grid gap-0 justify-center align-end">
+      <h2>Portfolio</h2>
+      <h1>FRANS SANTOSO</h1>
+    </section>
+    
+    <section class="navigation">
+      <nav>
+        <ul class="flex center-all">
+          <li><a href="#slide1">about</a></li>
+          <li><a href="#slide2">education</a></li>
+          <li><a href="#slide3">projects</a></li>
+          <li><a href="#slide4">experiences</a></li>
+          <li><a href="#slide5">skills</a></li>
+        </ul>
+      </nav>
+    </section>
 
-    <div id="superdiv">
-        <div class="slider">
-            <div class="slide" id="slide1">
-
-                <div class="middle" style="flex-direction: row;">
-                    <div id="b" class="right">
-                        <img src="/library/images/headshot.jpg"/>
-                    </div>
-
-                    <div id="d" class="vl">
-                        <!-- vertical line -->
-                    </div>
-                
-                    <div id="e" class="left">
-                        <a href="#slide1"><h1>about</h1></a>
-                        <a href="#slide2"><h1>education</h1></a>
-                        <a href="#slide3"><h1>projects</h1></a>
-                        <a href="#slide4"><h1>experiences</h1></a>
-                        <a href="#slide5"><h1>skills</h1></a>
-                    </div>
-                </div>
-
-                <div id="c">
-                    <div id="aboutme">
-                        <h1>about me</h1>
-                        <hr/>
-                        <p>
-                            I'm a software engineer seeking a real work environment performing software development related tasks that will make use of software, project management, and leadership skills. 
-                        </p>
-                    </div>
-                </div>
+    <section class="main">
+      <div class="slider">
+        <div class="slide" id="slide1">
+          <div class="flex center-all">
+            <div class="headshot right">
+              <img src="/library/images/headshot.jpg" />
             </div>
 
-            <div class="slide" id="slide2" style="align-items: flex-start;">
-                <div id="c" >
-                    <h1>education</h1>
-                    <hr/>
-                    <br>
-                    <h2>Bachelor of Science (B.S.) in Computer Science</h2>
-                    <table style="width: 100%">
-                        <tr>
-                            <td><h3>Liberty University, Lynchburg, VA</h3></td>
-                            <td style="vertical-align:bottom"><h3 style="text-align:right">Aug 2019 - May 2023</h3></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <p style="text-align: left;">
-                        Specialization: Software Engineering, Web and Mobile Development <br>
-                        Overall GPA: 3.94/4.00 <br>
-                        Dean’s List – Fall 2019 - Present <br>
-                        ABET accredited <br>
-                    </p>
-                    <br>
-
-                    <h1>highlights</h1> 
-                    <hr/>
-                    <p style="text-align: left;"> <br>
-                        •	Machine Learning capstone project: working with a private business to train a self-driving car by creating self-driving models using AWS DeepRacer and writing reward functions in Python <br>
-                        •	Designed and implemented data structures and algorithms in C++ in the Visual Studio IDE <br>
-                        •	Planned, outlined, and developed an MS-SQL database using SQL Server Management Studio <br>
-                    </p>
-
-                </div>
+            <div class="vl">
+              <!-- vertical line -->
             </div>
 
-            <div class="slide" id="slide3" style="align-items: flex-start;">
-                <div id="c" >
-                    <h1>projects</h1>
-                    <hr/>
-                    <br>
-                    <table style="width: 100%">
-                        <tr>
-                            <td><a href="https://wordle-2a2f8.web.app/"><h2 style="color: blue; text-decoration:underline">Wordle Copycat Prototype</h2></a></td>
-                            <td style="vertical-align:bottom"><h3 style="text-align:right">Jan 2023 - Feb 2023</h3></td>
-                        </tr>
-                    </table> 
-                    <p style="text-align: left;">
-                        •	Implemented a copy of the popular internet game Wordle developed fully in the React frontend <br>
-                        •	Explored webpage hosting using Google's Firebase where the game is fully working <br>
-                        •	Took advantage of third-party libraries in order to ease and speed up development <br>
-                    </p>
-                    <hr/>
-                    <br>
-                    <table style="width: 100%">
-                        <tr>
-                            <td><h2>Campus Dating Application Development</h2></td>
-                            <td style="vertical-align:bottom"><h3 style="text-align:right">Nov 2021 - Dec 2021</h3></td>
-                        </tr>
-                    </table> 
-                    <p style="text-align: left;">
-                        •	Developed and built the application prototype in C# using Microsoft’s Xamarin frameworks <br>
-                        •	Interviewed individuals from the user base and improved the user experience based on their feedback <br>
-                        •	Managed and controlled the application’s source files using Git and GitHub
-                    </p>
-                    <hr/>
-                    <br>
-                    <table style="width: 100%">
-                        <tr>
-                            <td><h2>SMS Messaging Webpage</h2></td>
-                            <td style="vertical-align:bottom"><h3 style="text-align:right">Feb 2021 - May 2021</h3></td>
-                        </tr>
-                    </table> 
-                    <p style="text-align: left;">              	
-                        •	Developed a webpage using HTML, CSS, and JavaScript using asynchronous methods (AJAX) including dynamic sending and receiving of messages through SMS
-                        <br>
-                        •	Produced BASH scripts which automated file transferring and data logging
-                        <br>
-                        •	Utilized third-party tools, such as smstools3, as well as packages that utilize the Linux kernel
-                        <br>                       
-                    </p>
-                </div>
+            <div class="buttons flex-column">
+              <a href="#about-me">
+                <h1>about</h1>
+              </a>
+              <a href="#slide2">
+                <h1>education</h1>
+              </a>
+              <a href="#slide3">
+                <h1>projects</h1>
+              </a>
+              <a href="#slide4">
+                <h1>experiences</h1>
+              </a>
+              <a href="#slide5">
+                <h1>skills</h1>
+              </a>
             </div>
-            
-            <div class="slide" id="slide4" style="align-items: flex-start;">
-                <div id="c" >
-                    <h1>professional experience</h1>
-                    <hr/>
-                    <br>
-                    <table style="width: 100%">
-                        <tr>
-                            <td><h2>IT Front Desk Specialist</h2></td>
-                            <td style="vertical-align:bottom"><h3 style="text-align:right;">Liberty University, Present</h3></td>
-                        </tr>
-                    </table> 
-                    <p style="text-align: left;">
-                        •	Perform troubleshooting and issue resolution for end user computers and phones <br>
-                        •	Manage customer interactions and gather requirements for further technical analysis <br>
-                        •	Built templates and queries in the ServiceNow platform to automate manual processes <br>
-                        •	Provide support and on the job training to junior team members
-                        
-                    </p>
-                </div>
-            </div>
+          </div>
 
-            <div class="slide" id="slide5" style="align-items: flex-start;">
-                <div id="c" >
-                    <h1>skills</h1>
-                    <hr/>
-                    <br>
-                    <table style="width: 100%">
-                        <tr>
-                            <td><h2>Software Development</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">C, C++, C#, Java, Python, HTML, CSS, JavaScript, NodeJS, ExpressJS, PHP</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Database Development</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">MS-SQL, PostgreSQL, MySQL, SSMS, Access</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Machine Learning</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">AWS DeepRacer, AWS SageMaker, AWS SageMaker Notebook</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Life Cycle (SDLC)</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">Agile, Scrum, Version Control (Git and GitHub)</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Coding and Problem Solving</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">Design and Implementation of Data Structures, Analysis of Algorithms</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Theoretical Computer Science</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">Operating Systems, Theory of Programming Languages, Assembly (x86)</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h2>Scripting</h2></td>
-                            <td style="vertical-align:middle"><h3 style="text-align:left;">BASH, Shell, Perl</h3></td>
-                        </tr>
-                    </table> 
-                </div>
-            </div>
+          <div id="#about-me" class="about-me">
+            <h1>about me</h1>
+            <hr />
+            <p>
+              I'm a software engineer seeking a real work environment performing software development related tasks
+              that will make use of software, project management, and leadership skills.
+            </p>
+          </div>
         </div>
 
+        <div class="slide" id="slide2" style="align-items: flex-start;">
+          <div id="c">
+            <h1>education</h1>
+            <hr />
+            <br>
+            <h2>Bachelor of Science (B.S.) in Computer Science</h2>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <h3>Liberty University, Lynchburg, VA</h3>
+                </td>
+                <td style="vertical-align:bottom">
+                  <h3 style="text-align:right">Aug 2019 - May 2023</h3>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <p style="text-align: left;">
+              Specialization: Software Engineering, Web and Mobile Development <br>
+              Overall GPA: 3.94/4.00 <br>
+              Dean’s List – Fall 2019 - Present <br>
+              ABET accredited <br>
+            </p>
+            <br>
 
+            <h1>highlights</h1>
+            <hr />
+            <p style="text-align: left;"> <br>
+              • Machine Learning capstone project: working with a private business to train a self-driving car by
+              creating self-driving models using AWS DeepRacer and writing reward functions in Python <br>
+              • Designed and implemented data structures and algorithms in C++ in the Visual Studio IDE <br>
+              • Planned, outlined, and developed an MS-SQL database using SQL Server Management Studio <br>
+            </p>
+
+          </div>
+        </div>
+
+        <div class="slide" id="slide3" style="align-items: flex-start;">
+          <div id="c">
+            <h1>projects</h1>
+            <hr />
+            <br>
+            <table style="width: 100%">
+              <tr>
+                <td><a href="https://wordle-2a2f8.web.app/">
+                    <h2 style="color: blue; text-decoration:underline">Wordle Copycat Prototype</h2>
+                  </a></td>
+                <td style="vertical-align:bottom">
+                  <h3 style="text-align:right">Jan 2023 - Feb 2023</h3>
+                </td>
+              </tr>
+            </table>
+            <p style="text-align: left;">
+              • Implemented a copy of the popular internet game Wordle developed fully in the React frontend <br>
+              • Explored webpage hosting using Google's Firebase where the game is fully working <br>
+              • Took advantage of third-party libraries in order to ease and speed up development <br>
+            </p>
+            <hr />
+            <br>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <h2>Campus Dating Application Development</h2>
+                </td>
+                <td style="vertical-align:bottom">
+                  <h3 style="text-align:right">Nov 2021 - Dec 2021</h3>
+                </td>
+              </tr>
+            </table>
+            <p style="text-align: left;">
+              • Developed and built the application prototype in C# using Microsoft’s Xamarin frameworks <br>
+              • Interviewed individuals from the user base and improved the user experience based on their feedback <br>
+              • Managed and controlled the application’s source files using Git and GitHub
+            </p>
+            <hr />
+            <br>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <h2>SMS Messaging Webpage</h2>
+                </td>
+                <td style="vertical-align:bottom">
+                  <h3 style="text-align:right">Feb 2021 - May 2021</h3>
+                </td>
+              </tr>
+            </table>
+            <p style="text-align: left;">
+              • Developed a webpage using HTML, CSS, and JavaScript using asynchronous methods (AJAX) including dynamic
+              sending and receiving of messages through SMS
+              <br>
+              • Produced BASH scripts which automated file transferring and data logging
+              <br>
+              • Utilized third-party tools, such as smstools3, as well as packages that utilize the Linux kernel
+              <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="slide" id="slide4" style="align-items: flex-start;">
+          <div id="c">
+            <h1>professional experience</h1>
+            <hr />
+            <br>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <h2>IT Front Desk Specialist</h2>
+                </td>
+                <td style="vertical-align:bottom">
+                  <h3 style="text-align:right;">Liberty University, Present</h3>
+                </td>
+              </tr>
+            </table>
+            <p style="text-align: left;">
+              • Perform troubleshooting and issue resolution for end user computers and phones <br>
+              • Manage customer interactions and gather requirements for further technical analysis <br>
+              • Built templates and queries in the ServiceNow platform to automate manual processes <br>
+              • Provide support and on the job training to junior team members
+
+            </p>
+          </div>
+        </div>
+        <div class="slide" id="slide5" style="align-items: flex-start;">
+          <div id="c">
+            <h1>skills</h1>
+            <hr />
+            <br>
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <h2>Software Development</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">C, C++, C#, Java, Python, HTML, CSS, JavaScript, NodeJS, ExpressJS, PHP
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Database Development</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">MS-SQL, PostgreSQL, MySQL, SSMS, Access</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Machine Learning</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">AWS DeepRacer, AWS SageMaker, AWS SageMaker Notebook</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Life Cycle (SDLC)</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">Agile, Scrum, Version Control (Git and GitHub)</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Coding and Problem Solving</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">Design and Implementation of Data Structures, Analysis of Algorithms</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Theoretical Computer Science</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">Operating Systems, Theory of Programming Languages, Assembly (x86)</h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Scripting</h2>
+                </td>
+                <td style="vertical-align:middle">
+                  <h3 style="text-align:left;">BASH, Shell, Perl</h3>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    
-    <div id="buttons" class="middle">
-        <a href="#slide1">about</a>
-        <a href="#slide2">education</a>
-        <a href="#slide3">projects</a>
-        <a href="#slide4">experiences</a>
-        <a href="#slide5">skills</a>
-    </div>
-</div>
-
-
-
-
-
-</div>
+  <footer class="flex center-all padding">
+    <p>Created by Frans Santoso</p>
+  </footer>
 </body>
 </html>
