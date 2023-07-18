@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Frans Santoso</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
-
   <!-- Set View Size -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Stylesheets -->
   <link href="library/styles/destyle.css" rel="stylesheet">
   <link href="library/styles/style.css" rel="stylesheet">
   <link href="library/styles/symbols.css" rel="stylesheet">
-
   <!-- Google Font(s) -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Ubuntu+Mono&display=swap');
@@ -24,14 +20,11 @@
 </head>
 
 <body>
-
   <div class="container">
-
     <section class="header grid gap-0 justify-center align-end">
-      <h2>Portfolio</h2>
+      <h2>Portfolio (WIP)</h2>
       <h1>FRANS SANTOSO</h1>
     </section>
-
     <section class="navigation">
       <nav>
         <ul class="flex center-all">
@@ -50,11 +43,9 @@
             <div class="headshot flex justify-end">
               <img src="/library/images/headshot.jpg" />
             </div>
-
             <div class="vl">
               <!-- vertical line -->
             </div>
-
             <div class="buttons flex-column">
               <a><h1>about</h1></a>
               <a><h1>education</h1></a>
@@ -63,8 +54,7 @@
               <a><h1>skills</h1></a>
             </div>
           </div>
-
-          <div id="#about-me" class="about-me">
+          <div class="about-me">
             <h1>about me</h1>
             <hr />
             <p>
@@ -73,7 +63,7 @@
             </p>
           </div>
         </div>
-        <div class="slide grid" id="slide2" style="align-items: flex-start;">
+        <div class="slide grid" id="slide2">
           <div id="c">
             <h1>education</h1>
             <hr />
@@ -109,7 +99,7 @@
 
           </div>
         </div>
-        <div class="slide grid" id="slide3" style="align-items: flex-start;">
+        <div class="slide grid" id="slide3">
           <div id="c">
             <h1>projects</h1>
             <hr />
@@ -169,7 +159,7 @@
             </p>
           </div>
         </div>
-        <div class="slide grid" id="slide4" style="align-items: flex-start;">
+        <div class="slide grid" id="slide4">
           <div id="c">
             <h1>professional experience</h1>
             <hr />
@@ -193,7 +183,7 @@
             </p>
           </div>
         </div>
-        <div class="slide grid" id="slide5" style="align-items: flex-start;">
+        <div class="slide grid" id="slide5">
           <div id="c">
             <h1>skills</h1>
             <hr />
@@ -262,14 +252,14 @@
       </div>
       <button class="slider-button left flex center-all hidden"><i class="arrow left"></i></button>
       <button class="slider-button right flex center-all"><i class="arrow right"></i></button>
-  </div>
+    </section>
   </div>
   <footer class="flex center-all padding">
     <p>Created by Frans Santoso</p>
   </footer>
-</body>
 
-<script>
+  <!-- START JAVASCRIPT -->
+  <script>
   (function () {
     //****************************************
     // Query Selectors
@@ -355,8 +345,10 @@
       }
     });
   })();
+  </script>
+  <!-- END JAVASCRIPT -->
+</body>
 
 
-</script>
 
 </html>
