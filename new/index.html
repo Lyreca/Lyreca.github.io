@@ -34,18 +34,17 @@
     <section class="navigation">
       <nav>
         <ul class="flex center-all">
-          <li><a href="#slide1">about</a></li>
-          <li><a href="#slide2">education</a></li>
-          <li><a href="#slide3">projects</a></li>
-          <li><a href="#slide4">experiences</a></li>
-          <li><a href="#slide5">skills</a></li>
+          <li><a>about</a></li>
+          <li><a>education</a></li>
+          <li><a>projects</a></li>
+          <li><a>experiences</a></li>
+          <li><a>skills</a></li>
         </ul>
       </nav>
     </section>
-
     <section class="main">
-      <div class="slider">
-        <div class="slide" id="slide1">
+      <div class="slider grid col-5">
+        <div class="slide grid" id="slide1">
           <div class="flex center-all">
             <div class="headshot right">
               <img src="/library/images/headshot.jpg" />
@@ -83,8 +82,7 @@
             </p>
           </div>
         </div>
-
-        <div class="slide" id="slide2" style="align-items: flex-start;">
+        <div class="slide grid" id="slide2" style="align-items: flex-start;">
           <div id="c">
             <h1>education</h1>
             <hr />
@@ -120,8 +118,7 @@
 
           </div>
         </div>
-
-        <div class="slide" id="slide3" style="align-items: flex-start;">
+        <div class="slide grid" id="slide3" style="align-items: flex-start;">
           <div id="c">
             <h1>projects</h1>
             <hr />
@@ -181,8 +178,7 @@
             </p>
           </div>
         </div>
-
-        <div class="slide" id="slide4" style="align-items: flex-start;">
+        <div class="slide grid" id="slide4" style="align-items: flex-start;">
           <div id="c">
             <h1>professional experience</h1>
             <hr />
@@ -206,7 +202,7 @@
             </p>
           </div>
         </div>
-        <div class="slide" id="slide5" style="align-items: flex-start;">
+        <div class="slide grid" id="slide5" style="align-items: flex-start;">
           <div id="c">
             <h1>skills</h1>
             <hr />
@@ -273,11 +269,58 @@
           </div>
         </div>
       </div>
+      <button class="slider-button left flex center-all"></button>
+      <button class="slider-button right flex center-all"></button>
     </div>
   </div>
-
   <footer class="flex center-all padding">
     <p>Created by Frans Santoso</p>
   </footer>
 </body>
+
+<script>
+  (function()
+  {
+    var slider = document.querySelector('.slider');
+    var nav_buttons = document.querySelectorAll('nav a');
+    slider.scrollLeftMax = 40;
+    window.onload = function()
+    {
+      slider.scrollLeft = 105;
+    };
+
+    nav_buttons.forEach(function(button, idx)
+    {
+      button.addEventListener('click', function(e)
+      {
+        e.preventDefault();
+        slider.scrollLeft = idx * 1140;
+      })
+    })
+
+    slider.addEventListener('scroll', function(e)
+    {
+      if(slider.scrollLeft < 100)
+      {
+        slider.scrollLeft = 105;
+      }
+
+      var which = Math.floor((slider.scrollLeft)/1140);
+      nav_buttons.forEach(function(button, idx)
+      {
+        if(idx === which)
+        {
+          button.classList.add('on');
+        }
+        else
+        {
+          button.classList.remove('on');
+        }
+      });
+    });
+  })();
+
+
+</script>
+
 </html>

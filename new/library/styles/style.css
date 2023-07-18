@@ -37,7 +37,10 @@ body {
   width: var(--container);
   border-radius: 20px;
   background-color: whitesmoke;
-  height: 95%;
+}
+
+.hidden {
+  display: none;
 }
 
 /****************************************
@@ -54,15 +57,19 @@ body {
 }
 
 .col-2 {
-  grid-template-columns: repeat(1fr, 2);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .col-3 {
-  grid-template-columns: repeat(1fr, 3);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .col-4 {
-  grid-template-columns: repeat(1fr, 4);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.col-5 {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .gap-0 {
@@ -237,7 +244,6 @@ nav li:last-child::after {
 }
 
 
-
 .about-me p {
   font-size: 1.5em;
   font-family: 'Ubuntu Mono', monospace;
@@ -253,14 +259,16 @@ nav li:last-child::after {
   padding: 0px 25px 0px 25px;
 }
 
-/* Slider */
+/****************************************
+* Slider 
+****************************************/
 .slider {
-  display: flex;
   height: 90%;
+  width: calc(1140px * 5);
+  padding-left: 100px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-
 
   /* transform-origin: center center;
   transform: scale(1);
@@ -268,11 +276,46 @@ nav li:last-child::after {
   position: relative; */
 }
 
+.slider-button {
+  position: absolute;
+  top: 30%;
+  width: 50px;
+  height: 50px;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bolder;
+}
+
+.slider-button.left {
+  left: 60px;
+}
+
+.slider-button.right {
+  right: 60px;
+}
+
+.slider-button.left::after {
+  content: '\003C'
+}
+
+.slider-button.right::after {
+  content: '\003E'
+}
+
 #buttons a {
   text-decoration: none;
   border-radius: 50%;
   margin: 0 15px 0 15px;
   position: relative;
+}
+
+a.on {
+  font-weight: bolder;
 }
 
 a:hover {
@@ -297,13 +340,8 @@ a:hover {
 /* Slide */
 .slide {
   width: 1140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
   scroll-snap-align: center;
-  padding: 0 25px;
+  padding: 0 6rem;
 }
 
 
@@ -359,24 +397,6 @@ h3 {
 }
 
 /* Classes */
-
-.middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.right {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.left {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
 
 .vl {
   height: 450px;
