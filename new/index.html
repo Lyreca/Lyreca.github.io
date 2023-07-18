@@ -18,7 +18,6 @@
   <!-- Favicon -->
   <link rel="icon" href="library/images/favicon/favicon.png" type="image/png" sizes="16x16">
 </head>
-
 <body>
   <div class="container">
     <section class="header grid gap-0 justify-center align-end">
@@ -28,45 +27,71 @@
     <section class="navigation">
       <nav>
         <ul class="flex center-all">
-          <li><a>about</a></li>
-          <li><a>education</a></li>
-          <li><a>projects</a></li>
-          <li><a>experience</a></li>
-          <li><a>skills</a></li>
+          <!-- <li><a>about</a></li> -->
+          <!-- <li><a>education</a></li> -->
+          <!-- <li><a>projects</a></li> -->
+          <!-- <li><a>experience</a></li> -->
+          <!-- <li><a>skills</a></li> -->
         </ul>
       </nav>
     </section>
     <section class="main">
       <div class="slider grid col-5">
-        <div class="slide grid" id="slide1">
+        <div class="slide grid" id="about">
           <div class="grid picture-section col-3">
             <div class="headshot flex justify-end">
-              <img src="/library/images/headshot.jpg" />
+              <img src="library/images/headshot.jpg" />
             </div>
             <div class="vl">
               <!-- vertical line -->
             </div>
-            <div class="buttons flex-column">
-              <a><h1>about</h1></a>
-              <a><h1>education</h1></a>
-              <a><h1>projects</h1></a>
-              <a><h1>experience</h1></a>
-              <a><h1>skills</h1></a>
+            <div class="nav-buttons flex-column justify-center">
+              <ul>
+                <!-- <li><a><h1>about</h1></a></li> -->
+                <!-- <li><a><h1>education</h1></a></li> -->
+                <!-- <li><a><h1>projects</h1></a></li> -->
+                <!-- <li><a><h1>experience</h1></a></li> -->
+                <!-- <li><a><h1>skills</h1></a></li> -->
+              </ul>
             </div>
           </div>
           <div class="about-me">
-            <h1>about me</h1>
-            <hr />
-            <p>
-              I'm a software engineer seeking a real work environment performing software development related tasks
-              that will make use of software, project management, and leadership skills.
-            </p>
+            <div class="content-title">
+              <h1>about me</h1>
+              <hr>
+            </div>
+            <div class="content-body">
+              <p>
+                I'm a software engineer seeking a real work environment performing software development related tasks
+                that will make use of software, project management, and leadership skills.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="slide grid" id="slide2">
+        <div class="slide experience" id="experience">
+          <div class="content-title">
+            <h1>professional experience</h1>
+            <hr>
+          </div>
+          <div class="grid gap-0 content-body">
+            <div class="grid col-2 content-title">
+              <h2 class="flex align-center">IT Front Desk Specialist</h2>
+              <h3 class="flex align-center justify-end">Liberty University, Feb 2020 - May 2023</h3>
+            </div>
+            <div class="content-body">
+              <ul>
+                <li>Perform troubleshooting and issue resolution for end user computers and phones</li>
+                <li>Manage customer interactions and gather requirements for further technical analysis</li>
+                <li>Built templates and queries in the ServiceNow platform to automate manual processes</li>
+                <li>Provide support and on the job training to junior team members</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide education" id="education">
           <div id="c">
             <h1>education</h1>
-            <hr />
+            <hr>
             <br>
             <h2>Bachelor of Science (B.S.) in Computer Science</h2>
             <table style="width: 100%">
@@ -89,7 +114,7 @@
             <br>
 
             <h1>highlights</h1>
-            <hr />
+            <hr>
             <p style="text-align: left;"> <br>
               • Machine Learning capstone project: working with a private business to train a self-driving car by
               creating self-driving models using AWS DeepRacer and writing reward functions in Python <br>
@@ -99,10 +124,10 @@
 
           </div>
         </div>
-        <div class="slide grid" id="slide3">
+        <div class="slide projects" id="projects">
           <div id="c">
             <h1>projects</h1>
-            <hr />
+            <hr>
             <br>
             <table style="width: 100%">
               <tr>
@@ -119,7 +144,7 @@
               • Explored webpage hosting using Google's Firebase where the game is fully working <br>
               • Took advantage of third-party libraries in order to ease and speed up development <br>
             </p>
-            <hr />
+            <hr>
             <br>
             <table style="width: 100%">
               <tr>
@@ -136,7 +161,7 @@
               • Interviewed individuals from the user base and improved the user experience based on their feedback <br>
               • Managed and controlled the application’s source files using Git and GitHub
             </p>
-            <hr />
+            <hr>
             <br>
             <table style="width: 100%">
               <tr>
@@ -159,34 +184,10 @@
             </p>
           </div>
         </div>
-        <div class="slide grid" id="slide4">
-          <div id="c">
-            <h1>professional experience</h1>
-            <hr />
-            <br>
-            <table style="width: 100%">
-              <tr>
-                <td>
-                  <h2>IT Front Desk Specialist</h2>
-                </td>
-                <td style="vertical-align:bottom">
-                  <h3 style="text-align:right;">Liberty University, Present</h3>
-                </td>
-              </tr>
-            </table>
-            <p style="text-align: left;">
-              • Perform troubleshooting and issue resolution for end user computers and phones <br>
-              • Manage customer interactions and gather requirements for further technical analysis <br>
-              • Built templates and queries in the ServiceNow platform to automate manual processes <br>
-              • Provide support and on the job training to junior team members
-
-            </p>
-          </div>
-        </div>
-        <div class="slide grid" id="slide5">
+        <div class="slide skills" id="skills">
           <div id="c">
             <h1>skills</h1>
-            <hr />
+            <hr>
             <br>
             <table style="width: 100%">
               <tr>
@@ -261,15 +262,16 @@
   <!-- START JAVASCRIPT -->
   <script>
   (function () {
+
     //****************************************
     // Query Selectors
     //****************************************
     
     var slider = document.querySelector('.slider');
+    var slides = slider.querySelectorAll('.slide');
     var slide_left = document.querySelector('.slider-button.left');
     var slide_right = document.querySelector('.slider-button.right');
-    var nav_buttons = document.querySelectorAll('nav a');
-    var nav_buttons_2 = document.querySelectorAll('.buttons a');
+    var nav_uls = document.querySelectorAll('nav ul, .nav-buttons ul');
 
     //****************************************
     // Functions
@@ -283,6 +285,26 @@
         slider.scrollLeft = idx * 1140;
       })
     }
+
+    //****************************************
+    // Navigation
+    //****************************************
+
+    // Add Nav buttons from slide ids
+    slides.forEach(function(slide)
+    {
+      nav_uls.forEach(function(ul)
+      {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.innerHTML = slide.id;
+        li.appendChild(a);
+        ul.appendChild(li);
+      })
+    })
+
+    var nav_buttons = document.querySelectorAll('nav a');
+    var nav_buttons_2 = document.querySelectorAll('.nav-buttons a');
 
     nav_buttons.forEach(function(button, idx) 
     {

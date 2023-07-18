@@ -30,6 +30,25 @@
 }
 
 /****************************************
+* Fonts
+****************************************/
+
+h2 {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 1em;
+}
+
+
+/****************************************
 * Body, Container
 ****************************************/
 html,
@@ -60,6 +79,8 @@ body {
 
 a {
   cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Standard syntax */
 }
 
 /****************************************
@@ -243,29 +264,17 @@ nav li:last-child::after {
   border-radius: 15px;
   width: 300px;
 }
-.buttons {
+.nav-buttons {
   padding: 20px;
   margin-right: 20px;
 }
 
-.buttons h1 {
+.nav-buttons li {
   margin: 16px 0;
 }
 
-
-.about-me {
-  padding: 30px 30px 0px 30px;
-
-}
-
-.about-me h1 {
-  letter-spacing: 0px;
-}
-
-
-.about-me p {
-  font-size: 1.5em;
-  font-family: 'Ubuntu Mono', monospace;
+.nav-buttons a {
+  
 }
 
 .main {
@@ -314,13 +323,6 @@ nav li:last-child::after {
   padding-right: 5px;
 }
 
-#buttons a {
-  text-decoration: none;
-  border-radius: 50%;
-  margin: 0 15px 0 15px;
-  position: relative;
-}
-
 a.on {
   font-weight: bolder;
 }
@@ -332,10 +334,9 @@ a:hover {
 
 
 /****************************************
-* Slides
+* Slide
 ****************************************/
 
-/* Slide */
 .slide {
   width: 1140px;
   scroll-snap-align: center;
@@ -343,59 +344,37 @@ a:hover {
 }
 
 
-/* Slides */
-#slide1 {
-  flex-direction: column;
+.content-title + .content-body {
+  margin-top: 0.5rem;
 }
 
-#slide2 {
-  flex-direction: row;
-}
+/****************************************
+* Slides
+****************************************/
 
-h2 {
-  font-weight: bold;
-  font-size: 1.8em;
-}
-
-h3 {
-  font-weight: normal;
-  font-size: 1.3em;
-}
-
-.grid.picture-section {
+/* Picture Section */
+.picture-section.grid {
   grid-template-columns: 1fr 0.1fr 1fr;
 }
 
-#slide3 {
-  flex-direction: row;
+.picture-section a {
+  font-size: 1.8em;
 }
 
-#slide3 h1 {
-  font-size: 2em;
+/* about me */
+.about-me {
+  padding: 30px 30px 0px 30px;
 }
 
-#slide3 h2 {
-  font-size: 1.4em;
+.about-me p {
+  font-size: 1.5em;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
-#slide3 h3 {
-  font-size: 1.3em;
-}
-
-#slide3 p {
-  font-size: 1.3em;
-}
-
-#slide4 {
-  flex-direction: row;
-}
-
-#slide5 {
-  flex-direction: row;
-}
-
-#slide5 table td {
-  padding: 5px;
+.experience ul {
+  list-style: disc;
+  padding-left: 25px;
+  text-indent: 5px;
 }
 
 /* Classes */
