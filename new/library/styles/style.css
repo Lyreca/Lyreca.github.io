@@ -78,6 +78,7 @@ body {
 
 .hidden {
   display: none !important;
+  opacity: 0 !important;
 }
 
 a {
@@ -108,13 +109,15 @@ ul li {
 }
 
 nav ul,
-.nav-buttons ul {
+.nav-buttons ul,
+footer ul {
   list-style: none;
   padding: 0;
 }
 
 nav ul li,
-.nav-buttons ul li {
+.nav-buttons ul li,
+footer ul li {
   padding: 0;
 }
 
@@ -345,6 +348,7 @@ nav li:last-child::after {
   height: 50px;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.8);
+  transition: all .05s ease-out 0.2s;
 }
 
 .slider-button:hover {
@@ -354,12 +358,22 @@ nav li:last-child::after {
 
 .slider-button.left {
   left: -75px;
-  padding-left: 5px;
+}
+
+.slider-button.left-max {
+  left: -150px;
 }
 
 .slider-button.right {
   right:-75px;
-  padding-right: 5px;
+}
+
+.slider-button.right-max {
+  right:-150px;
+}
+
+.slider-button i {
+  color: #007e75;
 }
 
 a.on {
@@ -410,6 +424,28 @@ a:hover {
   font-size: 1.8em;
 }
 
+/* contact info */
+
+.contact-info i::before {
+  font-size: 0.8em;
+}
+
+.contact-info .fa-linkedin {
+  color: #0077B5;
+}
+
+.contact-info .fa-phone {
+  color: #007C00;
+}
+
+.contact-info .fa-envelope {
+  color: #ECC100;
+}
+
+.contact-info a:hover i {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 /* about me */
 .about-me {
   padding: 30px 30px 0px 30px;
@@ -441,6 +477,12 @@ a:hover {
 /****************************************
 * Footer
 ****************************************/
+
+footer,
+footer ul {
+  width: 1140px;
+}
+
 
 footer.padding {
   color: white;
