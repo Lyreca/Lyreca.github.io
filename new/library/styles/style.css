@@ -14,6 +14,21 @@
   --font-2: 'Ubuntu Mono', monospace;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 5px;
+  border-radius: 20px;
+  background-color: darkgray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
 /****************************************
 * Body, Container
 ****************************************/
@@ -40,7 +55,11 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+a {
+  cursor: pointer;
 }
 
 /****************************************
@@ -193,7 +212,7 @@ nav li:last-child::after {
 
 .header h2 {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 2.5px;
 }
 
@@ -269,11 +288,6 @@ nav li:last-child::after {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-
-  /* transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative; */
 }
 
 .slider-button {
@@ -281,9 +295,8 @@ nav li:last-child::after {
   top: 30%;
   width: 50px;
   height: 50px;
-  color: black;
-  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .slider-button:hover {
@@ -292,19 +305,13 @@ nav li:last-child::after {
 }
 
 .slider-button.left {
-  left: 60px;
+  left: 25px;
+  padding-left: 5px;
 }
 
 .slider-button.right {
-  right: 60px;
-}
-
-.slider-button.left::after {
-  content: '\003C'
-}
-
-.slider-button.right::after {
-  content: '\003E'
+  right: 25px;
+  padding-right: 5px;
 }
 
 #buttons a {
@@ -322,20 +329,11 @@ a:hover {
   font-weight: bolder;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-  height: 5px;
-}
 
-::-webkit-scrollbar-thumb {
-  border-width: 5px;
-  border-radius: 20px;
-  background-color: darkgray;
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: gray;
-}
+/****************************************
+* Slides
+****************************************/
 
 /* Slide */
 .slide {
@@ -362,6 +360,10 @@ h2 {
 h3 {
   font-weight: normal;
   font-size: 1.3em;
+}
+
+.grid.picture-section {
+  grid-template-columns: 1fr 0.1fr 1fr;
 }
 
 #slide3 {
@@ -414,178 +416,3 @@ footer.padding {
   color: white;
   padding: 1rem 3rem 2.5rem 3rem;
 }
-
-/* Media Queries */
-
-
-@media (max-width: 480px) {
-  #container {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    margin-top: 0;
-  }
-
-  .header.middle {
-    width: auto;
-    border-radius: 0;
-  }
-
-  img {
-    max-width: 45%;
-  }
-
-  #slide1 div>#b.right {
-    justify-content: center;
-    flex-direction: row;
-  }
-
-  .slide {
-    width: 100%;
-
-  }
-
-  [class*="slide"] {
-    padding: 0px;
-  }
-
-  #buttons.middle {
-    align-items: flex-start;
-  }
-
-
-  h1 {
-    font-size: 6vw;
-  }
-
-  h2 {
-    font-size: 5vw !important;
-  }
-
-  h3 {
-    font-size: 4.5vw !important;
-  }
-
-  #c p {
-    font-size: 4vw;
-  }
-
-  a {
-    font-size: 2.8vw;
-  }
-
-  #d,
-  #e {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-
-
-  #container {
-    width: 90%;
-  }
-
-  .header.middle {
-    width: auto;
-  }
-
-  img {
-    max-width: 80%;
-  }
-
-  #slide1 div>#b.right {
-    justify-content: center;
-    flex-direction: row;
-  }
-
-  .slide {
-    width: 100%;
-
-  }
-
-  [class*="slide"] {
-    padding: 0px;
-  }
-
-
-
-  h1 {
-    font-size: 6vw;
-  }
-
-  h2 {
-    font-size: 5vw !important;
-  }
-
-  h3 {
-    font-size: 4.5vw !important;
-  }
-
-  #c p {
-    font-size: 4vw;
-  }
-
-  a {
-    font-size: 2.8vw;
-  }
-
-  #d,
-  #e {
-    display: none;
-  }
-}
-
-
-/* Google Fonts
-
-font-family: 'Roboto', sans-serif;
-
-*/
-
-/* Full Screen Image
-
-background-image:url(../images/);
-background-position: center center;
-background-repeat:  no-repeat;
-background-attachment: fixed;
-background-size:  cover;
-background-color: var(--black);
-
-*/
-
-/* Individual Side Box Shadows
-
-top {
-  box-shadow: 0px -15px 10px -15px #111;
-}
-
-right {
-  box-shadow: 15px 0px 10px -15px #111;
-}
-
-bottom {
-  box-shadow: 0px 15px 10px -15px #111;
-}
-
-left {
-  box-shadow: -15px 0px 10px -15px #111;
-}
-
-*/
-
-/*  Making a Fullscreen Video Background 
-
-#video-background {
-  position: fixed;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
-}
-
-*/

@@ -13,6 +13,7 @@
   <!-- Stylesheets -->
   <link href="library/styles/destyle.css" rel="stylesheet">
   <link href="library/styles/style.css" rel="stylesheet">
+  <link href="library/styles/symbols.css" rel="stylesheet">
 
   <!-- Google Font(s) -->
   <style>
@@ -30,14 +31,14 @@
       <h2>Portfolio</h2>
       <h1>FRANS SANTOSO</h1>
     </section>
-    
+
     <section class="navigation">
       <nav>
         <ul class="flex center-all">
           <li><a>about</a></li>
           <li><a>education</a></li>
           <li><a>projects</a></li>
-          <li><a>experiences</a></li>
+          <li><a>experience</a></li>
           <li><a>skills</a></li>
         </ul>
       </nav>
@@ -45,8 +46,8 @@
     <section class="main">
       <div class="slider grid col-5">
         <div class="slide grid" id="slide1">
-          <div class="flex center-all">
-            <div class="headshot right">
+          <div class="grid picture-section col-3">
+            <div class="headshot flex justify-end">
               <img src="/library/images/headshot.jpg" />
             </div>
 
@@ -55,21 +56,11 @@
             </div>
 
             <div class="buttons flex-column">
-              <a href="#about-me">
-                <h1>about</h1>
-              </a>
-              <a href="#slide2">
-                <h1>education</h1>
-              </a>
-              <a href="#slide3">
-                <h1>projects</h1>
-              </a>
-              <a href="#slide4">
-                <h1>experiences</h1>
-              </a>
-              <a href="#slide5">
-                <h1>skills</h1>
-              </a>
+              <a><h1>about</h1></a>
+              <a><h1>education</h1></a>
+              <a><h1>projects</h1></a>
+              <a><h1>experience</h1></a>
+              <a><h1>skills</h1></a>
             </div>
           </div>
 
@@ -269,9 +260,9 @@
           </div>
         </div>
       </div>
-      <button class="slider-button left flex center-all"></button>
-      <button class="slider-button right flex center-all"></button>
-    </div>
+      <button class="slider-button left flex center-all hidden"><i class="arrow left"></i></button>
+      <button class="slider-button right flex center-all"><i class="arrow right"></i></button>
+  </div>
   </div>
   <footer class="flex center-all padding">
     <p>Created by Frans Santoso</p>
@@ -279,36 +270,65 @@
 </body>
 
 <script>
-  (function()
-  {
+  (function () {
+    //****************************************
+    // Query Selectors
+    //****************************************
+    
     var slider = document.querySelector('.slider');
+    var slide_left = document.querySelector('.slider-button.left');
+    var slide_right = document.querySelector('.slider-button.right');
     var nav_buttons = document.querySelectorAll('nav a');
-    slider.scrollLeftMax = 40;
-    window.onload = function()
-    {
-      slider.scrollLeft = 105;
-    };
+    var nav_buttons_2 = document.querySelectorAll('.buttons a');
 
-    nav_buttons.forEach(function(button, idx)
+    //****************************************
+    // Functions
+    //****************************************
+
+    function Handle_Navigation(button, idx)
     {
       button.addEventListener('click', function(e)
       {
         e.preventDefault();
         slider.scrollLeft = idx * 1140;
       })
+    }
+
+    nav_buttons.forEach(function(button, idx) 
+    {
+      Handle_Navigation(button, idx);
+    });
+
+    nav_buttons_2.forEach(function(button, idx) 
+    {
+      Handle_Navigation(button, idx);
+    });
+
+    window.onload = function () {
+      slider.scrollLeft = 125;
+    };
+
+    slide_left.addEventListener('click', function(e) 
+    {
+      slider.scrollLeft -= 1140;
+    })
+
+    slide_right.addEventListener('click', function(e) 
+    {
+      slider.scrollLeft += 1140;
     })
 
     slider.addEventListener('scroll', function(e)
     {
-      if(slider.scrollLeft < 100)
+      if (slider.scrollLeft <= 125)
       {
-        slider.scrollLeft = 105;
+        slider.scrollLeft = 125;
       }
 
-      var which = Math.floor((slider.scrollLeft)/1140);
-      nav_buttons.forEach(function(button, idx)
+      var which = Math.floor((slider.scrollLeft) / 1140);
+      nav_buttons.forEach(function (button, idx)
       {
-        if(idx === which)
+        if (idx === which)
         {
           button.classList.add('on');
         }
@@ -317,6 +337,22 @@
           button.classList.remove('on');
         }
       });
+
+      if (which === 0)
+      {
+        slide_left.classList.add('hidden');
+        slide_right.classList.remove('hidden');
+      }
+      else if (which === 4)
+      {
+        slide_right.classList.add('hidden');
+        slide_left.classList.remove('hidden');
+      }
+      else
+      {
+        slide_left.classList.remove('hidden');
+        slide_right.classList.remove('hidden');
+      }
     });
   })();
 
