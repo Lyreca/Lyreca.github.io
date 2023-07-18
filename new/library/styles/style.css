@@ -35,18 +35,21 @@
 
 h2 {
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 h3 {
   font-weight: normal;
-  font-size: 1.3em;
+  font-size: 1.15em;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.0em;
 }
 
+strong {
+  font-weight: bolder;
+}
 
 /****************************************
 * Body, Container
@@ -83,6 +86,38 @@ a {
   user-select: none; /* Standard syntax */
 }
 
+a[href]:not(.icon) {
+  color: #b1000d;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+i:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+ul li {
+  padding-left: 5px;
+}
+
+nav ul,
+.nav-buttons ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li,
+.nav-buttons ul li {
+  padding: 0;
+}
+
 /****************************************
 * Grid
 ****************************************/
@@ -98,6 +133,10 @@ a {
 
 .col-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.col-2-1 {
+  grid-template-columns: 2fr 1fr;
 }
 
 .col-3 {
@@ -123,6 +162,10 @@ a {
 .gap-2 {
   --gap: 2rem;
 }
+
+/****************************************
+* Align
+****************************************/
 
 .center-all {
   justify-content: center;
@@ -273,10 +316,6 @@ nav li:last-child::after {
   margin: 16px 0;
 }
 
-.nav-buttons a {
-  
-}
-
 .main {
   display: flex;
   height: 700px;
@@ -291,35 +330,35 @@ nav li:last-child::after {
 * Slider 
 ****************************************/
 .slider {
-  height: 90%;
+  height: 95%;
   width: calc(1140px * 5);
-  padding-left: 100px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
 
 .slider-button {
   position: absolute;
-  top: 30%;
+  top: 50%;
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .slider-button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   font-weight: bolder;
 }
 
 .slider-button.left {
-  left: 25px;
+  left: -75px;
   padding-left: 5px;
 }
 
 .slider-button.right {
-  right: 25px;
+  right:-75px;
   padding-right: 5px;
 }
 
@@ -339,17 +378,27 @@ a:hover {
 
 .slide {
   width: 1140px;
+  max-height: 95%;
   scroll-snap-align: center;
   padding: 0 6rem;
 }
 
-
 .content-title + .content-body {
+  margin-top: 1rem;
+}
+
+.content-body + .content-title {
   margin-top: 0.5rem;
 }
 
+.skills > .content-body {
+  max-height: 525px;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+}
+
 /****************************************
-* Slides
+* Specific Slides
 ****************************************/
 
 /* Picture Section */
@@ -371,10 +420,12 @@ a:hover {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-.experience ul {
-  list-style: disc;
-  padding-left: 25px;
-  text-indent: 5px;
+.content + .content::before {
+  content: '';
+  display: block;
+  border-top: 4px dotted rgba(0, 0, 0, 0.4);
+  margin: 1rem auto ;
+  width: calc(100% - 25px);
 }
 
 /* Classes */
