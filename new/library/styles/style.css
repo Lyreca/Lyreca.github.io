@@ -506,19 +506,6 @@ a:not(.button):hover {
   padding-right: 10px;
 }
 
-/****************************************
-* Specific Slides
-****************************************/
-
-/* Picture Section */
-.picture-section.grid {
-  grid-template-columns: 1fr 0.1fr 1fr;
-}
-
-.picture-section a {
-  font-size: 1.8em;
-}
-
 /* contact info */
 
 .contact-info i::before {

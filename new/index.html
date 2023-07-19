@@ -9,7 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Stylesheets -->
   <link href="library/styles/destyle.css" rel="stylesheet">
-  <link href="library/styles/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="library/styles/1_all.css">
+  <link rel="stylesheet" href="library/styles/2_phone.css" media="(min-width: 576px)">
+  <link rel="stylesheet" href="library/styles/3_tablet.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="library/styles/4_desktop.css" media="(min-width: 1140px)">
   <link href="library/styles/symbols.css" rel="stylesheet">
   <!-- Google Font(s) -->
   <style>
@@ -24,7 +27,7 @@
   <div class="container">
     <section class="header grid gap-0 align-center">
       <a class="flex-row download icon" href="library/static/franssantoso_resume.docx">
-        <p><i class="fa-solid fa-file-word fa-2xl"></i> Resume</p>
+        <p><i class="fa-solid fa-file-word fa-2xl"></i><br><span>Resume</span></p>
       </a>
       <h2>Portfolio</h2>
       <h1>FRANS SANTOSO</h1>
@@ -38,35 +41,37 @@
     <section class="main">
       <div class="slider grid">
         <div class="slide grid" id="about">
-          <div class="grid picture-section col-3">
-            <div class="headshot flex justify-end">
-              <img src="library/images/headshot.jpg" />
+          <div class="content">
+            <div class="grid picture-section col-1 col-3--tablet">
+              <div class="headshot flex center-all">
+                <img src="library/images/headshot.jpg" />
+              </div>
+              <div class="vl hidden visible--tablet">
+                <!-- vertical line -->
+              </div>
+              <div class="nav-buttons flex-column center-all">
+                <ul>
+                  <li>
+                    <ul class="flex contact-info gap-1">
+                      <li><a class="icon linkedin" href="https://www.linkedin.com/in/franssantoso/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+                      <li><a class="icon github" href="https://www.github.com/lyreca/" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+                      <li><a class="icon" href="mailto:info@franssantoso.com"><i class="fa fa-envelope fa-2xl"></i></a></li>
+                      <li><a class="icon" href="tel:+15713834199" target="_blank"><i class="fa fa-phone fa-xl"></i></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="vl">
-              <!-- vertical line -->
-            </div>
-            <div class="nav-buttons flex-column justify-center">
-              <ul>
-                <li>
-                  <ul class="flex contact-info gap-1">
-                    <li><a class="icon linkedin" href="https://www.linkedin.com/in/franssantoso/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                    <li><a class="icon github" href="https://www.github.com/lyreca/" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                    <li><a class="icon" href="mailto:info@franssantoso.com"><i class="fa fa-envelope fa-2xl"></i></a></li>
-                    <li><a class="icon" href="tel:+15713834199" target="_blank"><i class="fa fa-phone fa-xl"></i></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="about-me">
-            <div class="content-title">
-              <h1>about me</h1>
-              <hr>
-            </div>
-            <div class="content-body">
-              <p>
-                I am a <strong>Full-Stack Web Developer</strong> at <strong><a data-reference="experience">First Net Impressions</a></strong>. I work on both the front-end and the back-end of the development process, creating and designing websites for clients.
-              </p>
+            <div class="about-me">
+              <div class="content-title">
+                <h1>about me</h1>
+                <hr>
+              </div>
+              <div class="content-body">
+                <p>
+                  I am a <strong>Full-Stack Web Developer</strong> at <strong><a data-reference="experience">First Net Impressions</a></strong>. I work on both the front-end and the back-end of the development process, creating and designing websites for clients.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -77,9 +82,12 @@
           </div>
           <div class="grid gap-0 content-body">
             <div class="content">
-              <div class="grid col-2 content-title">
-                <h2 class="flex align-center">Full-Stack Web Developer<sub data-reference="contact">ref</sub></h2>
-                <h3 class="flex align-center justify-end"><strong><a href="https://www.firstnetimpressions.com/" target="_blank">First Net Impressions</a></strong>, May 2023 - Present</h3>
+              <div class="content-title">
+                <h2 class="flex align-center">Full-Stack Web Developer <sub data-reference="contact">ref</sub></h2>
+                <div class="company-and-date grid col-2--phone">
+                  <h3 class="flex align-center"><strong><a href="https://www.firstnetimpressions.com/" target="_blank">First Net Impressions</a></strong></h3>
+                  <h3 class="flex align-center justify-end">May 2023 - Present</h3>
+                </div>
               </div>
               <div class="content-body">
                 <ul>
@@ -104,9 +112,12 @@
               </div>
             </div>
             <div class="content">
-              <div class="grid col-2 content-title">
-                <h2 class="flex align-center">IT Front Desk Specialist<sub data-reference="contact">ref</sub></h2>
-                <h3 class="flex align-center justify-end"><strong><a href="https://www.liberty.edu/" target="_blank">Liberty University</a></strong>, Feb 2020 - May 2023</h3>
+              <div class="content-title">
+                <h2 class="flex align-center">IT Front Desk Specialist <sub data-reference="contact">ref</sub></h2>
+                <div class="company-and-date grid col-2--phone">
+                  <h3 class="flex align-center"><strong><a href="https://www.firstnetimpressions.com/" target="_blank">First Net Impressions</a></strong></h3>
+                  <h3 class="flex align-center justify-end">Sep 2020 - May 2023</h3>
+                </div>
               </div>
               <div class="content-body">
                 <ul>
@@ -120,33 +131,39 @@
           </div>
         </div>
         <div class="slide education" id="education">
-          <div class="content-title">
-            <h1>education</h1>
-            <hr>
-          </div>
-          <div class="content-body">
-            <h2>Bachelor of Science (B.S.) in Computer Science</h2>
-            <div class="grid col-2">
-              <h3 class="flex align-center"><a href="https://www.liberty.edu/" target="_blank">Liberty University</a>, Lynchburg, VA</h3>
-              <h3 class="flex align-center justify-end">Aug 2019 - May 2023</h3>
+          <div class="content">
+            <div class="content">
+              <div class="content-title">
+                <h1>education</h1>
+                <hr>
+              </div>
+              <div class="content-body">
+                <h2>Bachelor of Science (B.S.) in Computer Science</h2>
+                <div class="company-and-date grid col-2--phone">
+                  <h3 class="flex align-center"><a href="https://www.liberty.edu/" target="_blank">Liberty University</a>, Lynchburg, VA</h3>
+                  <h3 class="flex align-center justify-end">Aug 2019 - May 2023</h3>
+                </div>
+                <ul>
+                  <li>Specialization: Software Engineering, Web and Mobile Development</li>
+                  <li>Overall GPA: <strong>3.93/4.00</strong></li>
+                  <li>Dean's List - Fall 2019 - Present</li>
+                  <li>ABET accredited</li>
+                </ul>
+              </div>
             </div>
-            <ul>
-              <li>Specialization: Software Engineering, Web and Mobile Development</li>
-              <li>Overall GPA: <strong>3.93/4.00</strong></li>
-              <li>Dean's List - Fall 2019 - Present</li>
-              <li>ABET accredited</li>
-            </ul>
-          </div>
-          <div class="content-title">
-            <h1>highlights</h1>
-            <hr>
-          </div>
-          <div class="content-body">
-            <ul>
-              <li>Machine Learning capstone project: working with a private business to train a self-driving car by creating self-driving models using AWS DeepRacer and writing reward functions in Python</li>
-              <li>Designed and implemented data structures and algorithms in C++ in the Visual Studio IDE</li>
-              <li>Planned, outlined, and developed an MS-SQL database using SQL Server Management Studio</li>
-            </ul>
+            <div class="content">
+              <div class="content-title">
+                <h1>highlights</h1>
+                <hr>
+              </div>
+              <div class="content-body">
+                <ul>
+                  <li>Machine Learning capstone project: working with a private business to train a self-driving car by creating self-driving models using AWS DeepRacer and writing reward functions in Python</li>
+                  <li>Designed and implemented data structures and algorithms in C++ in the Visual Studio IDE</li>
+                  <li>Planned, outlined, and developed an MS-SQL database using SQL Server Management Studio</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <!-- <div class="slide projects" id="projects">
@@ -233,78 +250,84 @@
           </div>
         </div>
         <div class="slide contact" id="contact">
-          <div class="content-title flex justify-center">
-            <h1>contact</h1>
-          </div>
-          <div class="content-body contact-me grid col-3 gap-1">
-            <div class="card gap-1 center-all">
-              <div class="card-header icon linkedin">
-                <i class="fa-brands fa-linkedin fa-2xl"></i>
+          <div class="content">
+            <div class="content">
+              <div class="content-title flex justify-center">
+                <h1>contact</h1>
               </div>
-              <div class="card-body">
-                <h3>Connect with me on LinkedIn and start an online chat or a video call</h3>
-              </div>
-              <div class="card-footer">
-                <a class="button linkedin" href="https://www.linkedin.com/in/frannssantoso" target="_blank">Connect</a>
-              </div>
-            </div>
-            <div class="card gap-1 center-all">
-              <div class="card-header icon github">
-                <i class="fa-brands fa-github fa-2xl"></i>
-              </div>
-              <div class="card-body">
-                <h3>Check out my GitHub profile and see my projects and contributions</h3>
-              </div>
-              <div class="card-footer">
-                <a class="button github" href="https://www.github.com/lyreca" target="_blank">Profile</a>
-              </div>
-            </div>
-            <div class="card gap-1 center-all">
-              <div class="card-header icon">
-                <i class="fa fa-envelope fa-2xl"></i>
-                <i class="fa fa-phone fa-xl"></i>
-              </div>
-              <div class="card-body flex-column">
-                <h3>Send me an email or call me directly</h3>
-                <div class="grid col-2 gap-0">
-                  <p class="flex align-end">Email:</p>
-                  <p class="flex align-start"><strong>info@franssantoso.com</strong></p>
-                  <p class="flex align-end">Phone:</p>
-                  <p class="flex align-start"><strong>(571) 383-4199</strong></p>
+              <div class="content-body contact-me grid col-3--desktop gap-1">
+                <div class="card gap-1 center-all">
+                  <div class="card-header icon linkedin">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3>Connect with me on LinkedIn and start an online chat or a video call</h3>
+                  </div>
+                  <div class="card-footer">
+                    <a class="button linkedin" href="https://www.linkedin.com/in/frannssantoso" target="_blank">Connect</a>
+                  </div>
+                </div>
+                <div class="card gap-1 center-all">
+                  <div class="card-header icon github">
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3>Check out my GitHub profile and see my projects and contributions</h3>
+                  </div>
+                  <div class="card-footer">
+                    <a class="button github" href="https://www.github.com/lyreca" target="_blank">Profile</a>
+                  </div>
+                </div>
+                <div class="card gap-1 center-all">
+                  <div class="card-header icon">
+                    <i class="fa fa-envelope fa-2xl"></i>
+                    <i class="fa fa-phone fa-xl"></i>
+                  </div>
+                  <div class="card-body flex-column">
+                    <h3>Send me an email or call me directly</h3>
+                    <div class="grid col-2 gap-0">
+                      <p class="flex align-end">Email:</p>
+                      <p class="flex align-start"><strong>info@franssantoso.com</strong></p>
+                      <p class="flex align-end">Phone:</p>
+                      <p class="flex align-start"><strong>(571) 383-4199</strong></p>
+                    </div>
+                  </div>
+                  <div class="card-footer grid col-2 gap-1">
+                    <a class="button" href="mailto:info@franssantoso.com">Email</a>
+                    <a class="button" href="tel:+15713834199">Phone</a>
+                  </div>
                 </div>
               </div>
-              <div class="card-footer grid col-2 gap-1">
-                <a class="button" href="mailto:info@franssantoso.com">Email</a>
-                <a class="button" href="tel:+15713834199">Phone</a>
-              </div>
             </div>
-          </div>
-          <div class="content-title flex center-all">
-            <h1>references</h1>
-          </div>
-          <div class="content-body references grid col-2 gap-1">
-            <div class="card gap-0 center-all">
-              <div class="card-header">
-                <img src="library/images/fni.png" alt="First Net Impressions Logo">
+            <div class="content">
+              <div class="content-title flex center-all">
+                <h1>references</h1>
               </div>
-              <div class="card-body">
-                <p>
-                  Middleton, T., Supervisor<br>
-                  <a href="mailto:tylerm@firstnetimpressions.com">tylerm@firstnetimpressions.com</a><br>
-                  <a href="tel:17158327713">(715) 832-7713</a><br>
-                </p>
-              </div>
-            </div>
-            <div class="card gap-0 center-all">
-              <div class="card-header">
-                <img src="library/images/libu.png" alt="Liberty University Logo">
-              </div>
-              <div class="card-body">
-                <p>
-                  Robinson, D., Support Sp. III<br>
-                  <a href="mailto:drobinson@liberty.edu">drobinson@liberty.edu</a><br>
-                  <a href="tel:15555555555">(555) 555-5555</a><br>
-                </p>
+              <div class="content-body references grid col-2--desktop gap-1">
+                <div class="card gap-0 center-all">
+                  <div class="card-header">
+                    <img src="library/images/fni.png" alt="First Net Impressions Logo">
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Middleton, T., Supervisor<br>
+                      <a href="mailto:tylerm@firstnetimpressions.com">tylerm@firstnetimpressions.com</a><br>
+                      <a href="tel:17158327713">(715) 832-7713</a><br>
+                    </p>
+                  </div>
+                </div>
+                <div class="card gap-0 center-all">
+                  <div class="card-header">
+                    <img src="library/images/libu.png" alt="Liberty University Logo">
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Robinson, D., Support Sp. III<br>
+                      <a href="mailto:drobinson@liberty.edu">drobinson@liberty.edu</a><br>
+                      <a href="tel:15555555555">(555) 555-5555</a><br>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -322,8 +345,8 @@
       <li><a class="icon" href="https://www.github.com/lyreca/" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></li>
       <li><a class="icon" href="mailto:info@franssantoso.com"><i class="fa fa-envelope fa-2xl"></i></a></li>
       <li><a class="icon" href="tel:+15713834199" target="_blank"><i class="fa fa-phone fa-xl"></i></a></li>
-      <li><i>&#8226;</i></li>
-      <li><p>Created by Frans Santoso</p></li>
+      <li class="visible--tablet"><i>&#8226;</i></li>
+      <li class="visible--tablet"><p>Created by Frans Santoso</p></li>
     </ul>
   </footer>
 
@@ -335,6 +358,7 @@
     // Query Selectors
     //****************************************
     
+    var container = document.querySelector('.container');
     var slider = document.querySelector('.slider') || false;
     var slides = slider.querySelectorAll('.slide') || [];
     var slide_left = document.querySelector('.slider-button.left') || false;
@@ -342,31 +366,53 @@
     var slide_left_max = document.querySelector('.slider-button.left-max') || false;
     var slide_right_max = document.querySelector('.slider-button.right-max') || false;
     var nav_uls = document.querySelectorAll('nav > ul, .nav-buttons > ul') || [];
-    var container_width = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container').replace('px', ''));
-    console.log(container_width);
     var reference_buttons = document.querySelectorAll('[data-reference]') || [];
 
-    // Set class and width of slider
-    slider.classList.add('col-' + slides.length);
-    var slider_width = slides.length * container_width + 'px';
-    slider.style.width = slider_width;
 
     //****************************************
     // Functions
     //****************************************
+
+    var container_width = function()
+    {
+      return container.offsetWidth;
+    }
 
     function Handle_Navigation(button, idx)
     {
       button.addEventListener('click', function(e)
       {
         e.preventDefault();
-        slider.scrollLeft = idx * container_width;
+        slider.scrollLeft = idx * container_width();
       })
+    }
+
+    function Set_Slider_Width()
+    {
+      slides.forEach(function(slide) 
+      {
+        slide.style.width = container_width() + 'px';
+      });
+      console.log('run');
+      var slider_width = slides.length * container_width() + 'px';
+      slider.style.width = slider_width;
     }
 
     //****************************************
     // Navigation
     //****************************************
+
+    // Set class and width of slider
+    slider.classList.add('col-' + slides.length);
+    Set_Slider_Width();
+
+    // Add event listener for resize
+    var on_resize;
+    addEventListener('resize', function()
+    {
+      clearTimeout(on_resize);
+      on_resize = setTimeout(Set_Slider_Width, 100);
+    });
 
     // Add Nav buttons from slide ids
     slides.forEach(function(slide)
@@ -395,8 +441,6 @@
       Handle_Navigation(button, idx);
     });
 
-    console.log(nav_buttons);
-
     //****************************************
     // Scrolling/Slider
     //****************************************
@@ -407,12 +451,12 @@
 
     slide_left.addEventListener('click', function(e) 
     {
-      slider.scrollLeft -= container_width;
+      slider.scrollLeft -= container_width();
     })
 
     slide_right.addEventListener('click', function(e) 
     {
-      slider.scrollLeft += container_width;
+      slider.scrollLeft += container_width();
     })
 
     slide_left_max.addEventListener('click', function(e) 
@@ -422,7 +466,7 @@
 
     slide_right_max.addEventListener('click', function(e) 
     {
-      slider.scrollLeft = container_width * 5;
+      slider.scrollLeft = container_width() * 5;
     })
 
     reference_buttons.forEach(function(button)
@@ -442,7 +486,7 @@
         slider.scrollLeft = 15;
       }
 
-      var which = Math.floor((slider.scrollLeft) / container_width);
+      var which = Math.floor((slider.scrollLeft) / container_width());
       nav_buttons.forEach(function (button, idx)
       {
         if (idx === which)
