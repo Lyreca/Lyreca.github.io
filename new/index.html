@@ -393,7 +393,6 @@
       {
         slide.style.width = container_width() + 'px';
       });
-      console.log('run');
       var slider_width = slides.length * container_width() + 'px';
       slider.style.width = slider_width;
     }
@@ -481,9 +480,13 @@
 
     slider.addEventListener('scroll', function(e)
     {
-      if (slider.scrollLeft <= 15)
+      if (slider.scrollLeft < 15)
       {
-        slider.scrollLeft = 15;
+        setTimeout(function()
+        {
+          slider.scrollLeft = 15;
+        }, 100)
+
       }
 
       var which = Math.floor((slider.scrollLeft) / container_width());

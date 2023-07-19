@@ -1156,7 +1156,6 @@ a:not(.button):hover {
 
 .references .card {
   height: 300px;
-  padding: 0 1rem;
   flex-direction: column;
 }
 
