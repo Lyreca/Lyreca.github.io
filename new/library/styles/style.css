@@ -546,6 +546,20 @@ a:not(.button):hover {
 /* contact */
 .contact > .content-body {
   padding-bottom: 1rem;
+  overflow: hidden;
+}
+
+.references p {
+  text-align: left;
+}
+
+.references .card-header {
+  width: 125px;
+}
+
+.references img {
+  max-width: 125px;
+  max-height: 125px;
 }
 
 /****************************************
@@ -555,7 +569,7 @@ a:not(.button):hover {
 .card {
   display: flex;
   gap: var(--gap);
-  background-color: rgba(0, 0, 0, 0.055);
+  background-color: rgba(0, 0, 0, 0.040);
   border-radius: 10px;
   text-align: center;
 }
