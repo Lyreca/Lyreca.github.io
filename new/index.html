@@ -349,6 +349,8 @@
       <li><a class="icon" href="mailto:info@franssantoso.com"><i class="fa fa-envelope fa-2xl"></i></a></li>
       <li><a class="icon" href="tel:+15713834199" target="_blank"><i class="fa fa-phone fa-xl"></i></a></li>
       <li class="visible--tablet"><i>&#8226;</i></li>
+      <li class="visible--tablet"><a class="icon" href="https://github.com/Lyreca/Lyreca.github.io"><p>Source Code</p></a></li>
+      <li class="visible--tablet"><i>&#8226;</i></li>
       <li class="visible--tablet"><p>Created by Frans Santoso</p></li>
     </ul>
   </footer>
@@ -483,15 +485,6 @@
 
     slider.addEventListener('scroll', function(e)
     {
-      // if (slider.scrollLeft < 15)
-      // {
-      //   setTimeout(function()
-      //   {
-      //     slider.scrollLeft = 15;
-      //   }, 100)
-
-      // }
-
       var which = Math.floor((slider.scrollLeft) / container_width());
       nav_buttons.forEach(function (button, idx)
       {

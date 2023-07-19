@@ -894,8 +894,8 @@ footer ul li {
 
 a.download {
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 15%;
+  right: 10px;
   z-index: 999;
   gap: 0.25rem;
 }
@@ -911,7 +911,7 @@ a.download:hover {
 
 .navigation {
   font-size: 13px;
-  padding: 0.25rem 0;
+  padding: 0.75rem 0;
   background-color: #a8dadc;
   filter: drop-shadow(0px 5px 2.5px rgba(0, 0, 0, 0.3));
   overflow: hidden;
@@ -1148,6 +1148,7 @@ a:not(.button):hover {
   filter: drop-shadow(0px 0px 2.5px rgba(0, 0, 0, 0.3));
   border-radius: 10px;
   text-align: center;
+  width: 100%;
 }
 
 .contact-me .card {
