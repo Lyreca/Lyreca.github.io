@@ -182,6 +182,10 @@ nav li::after {
   padding: 30px 30px 0px 30px;
 }
 
+.about-me p {
+  font-size: 23px;
+}
+
 /* skills */
 
 .experience > .content-body,
@@ -212,6 +216,7 @@ nav li::after {
 
 .references .card-header {
   width: 125px;
+  height: 100%;
 }
 
 .references img {

@@ -1172,7 +1172,7 @@ a:not(.button):hover {
 }
 
 .references .card-header {
-  
+  height: 120px;
 }
 
 .card-body {
