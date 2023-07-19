@@ -483,14 +483,14 @@
 
     slider.addEventListener('scroll', function(e)
     {
-      if (slider.scrollLeft < 15)
-      {
-        setTimeout(function()
-        {
-          slider.scrollLeft = 15;
-        }, 100)
+      // if (slider.scrollLeft < 15)
+      // {
+      //   setTimeout(function()
+      //   {
+      //     slider.scrollLeft = 15;
+      //   }, 100)
 
-      }
+      // }
 
       var which = Math.floor((slider.scrollLeft) / container_width());
       nav_buttons.forEach(function (button, idx)
