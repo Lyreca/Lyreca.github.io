@@ -897,6 +897,7 @@ a.download {
   top: 25px;
   right: 20px;
   z-index: 999;
+  gap: 0.25rem;
 }
 
 a.download:hover {
