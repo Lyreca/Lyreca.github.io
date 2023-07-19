@@ -39,11 +39,16 @@
   height: 100%;
 }
 
-/* contact */
-.education > .content,
-.contact > .content {
+/* education */
+.education > .content {
   height: 100%;
   overflow-y: hidden;
+}
+
+/* contact */
+.contact .card {
+  width: 375px;
+  margin: 0 auto;
 }
 
 /* Picture Section */

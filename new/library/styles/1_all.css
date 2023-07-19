@@ -1123,7 +1123,7 @@ a:not(.button):hover {
 }
 
 .references p {
-  text-align: left;
+  text-align: center;
 }
 
 .references .card-header {
