@@ -196,6 +196,12 @@ nav li::after {
   overflow-y: hidden;
 }
 
+/* contact */
+.contact .card {
+  width: 100%;
+  margin: 0;
+}
+
 .contact > .content-body {
   padding-bottom: 1rem;
 }
