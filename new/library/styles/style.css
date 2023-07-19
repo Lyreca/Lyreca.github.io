@@ -15,7 +15,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
   height: 5px;
 }
 
@@ -49,6 +49,61 @@ p {
 
 strong {
   font-weight: bolder;
+}
+
+/****************************************
+* Icon
+****************************************/
+
+.icon {
+  color: #00B1A4;
+}
+
+.linkedin {
+  color: #0077B5;
+}
+
+.github {
+  color: #000000;
+}
+
+.phone {
+  color: #007C00;
+}
+
+.envelope {
+  color: #ECC100;
+}
+
+/****************************************
+* Button
+****************************************/
+
+.button {
+  background-color: #00B1A4;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color: white;
+}
+
+.button.linkedin {
+  background-color: #0077B5;
+}
+
+.button.github {
+  background-color: #000000;
+}
+
+.button.phone {
+  background-color: #007C00;
+}
+
+.button.envelope {
+  background-color: #ECC100;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /****************************************
@@ -95,7 +150,7 @@ a[href]:hover {
   text-decoration: underline;
 }
 
-i:hover {
+a i:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -152,6 +207,18 @@ footer ul li {
 
 .col-5 {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.col-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.col-8 {
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .gap-0 {
@@ -238,17 +305,46 @@ footer ul li {
 ****************************************/
 
 .header {
-  height: 150px;
+  height: 200px;
   background-color: #00B1A4;
   color: white;
   border-radius: 20px 20px 0px 0px;
-  filter: drop-shadow(0px 5px 1.5px rgb(65, 65, 65));
   text-align: center;
+  padding-top: 1rem;
   padding-bottom: 0;
+  user-select: none;
 }
 
 .header.middle {
   flex-direction: column;
+}
+
+.header h1 {
+  font-size: 80px;
+  font-weight: bolder;
+  letter-spacing: 2.5px;
+}
+
+.header h2 {
+  font-size: 32.5px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+
+.header a {
+  color: white;
+}
+
+a.download {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 999;
+}
+
+a.download:hover {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: normal;
 }
 
 /****************************************
@@ -256,7 +352,11 @@ footer ul li {
 ****************************************/
 
 .navigation {
-  margin-top: 4rem;
+  font-size: 22.5px;
+  padding: 0.5rem 0;
+  background-color: #a8dadc;
+  filter: drop-shadow(0px 5px 2.5px rgba(0, 0, 0, 0.3));
+  overflow: hidden;;
 }
 
 nav li::after {
@@ -270,26 +370,12 @@ nav li:last-child::after {
   padding: 0;
 }
 
-.header h1 {
-  font-size: 110px;
-  font-weight: bolder;
-  letter-spacing: 2.5px;
-  line-height: 10px;
-}
-
-.header h2 {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 2.5px;
-}
-
-
 /****************************************
 * Main
 ****************************************/
 
 .main {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .main h1 {
@@ -334,7 +420,6 @@ nav li:last-child::after {
 ****************************************/
 .slider {
   height: 95%;
-  width: calc(1140px * 5);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -384,8 +469,6 @@ a:hover {
   font-weight: bolder;
 }
 
-
-
 /****************************************
 * Slide
 ****************************************/
@@ -405,10 +488,14 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-.skills > .content-body {
+.slide > .content-title {
+  padding-right: 10px;
+}
+
+.slide > .content-body {
   max-height: 525px;
   overflow-y: scroll;
-  overscroll-behavior-y: contain;
+  padding-right: 10px;
 }
 
 /****************************************
@@ -428,18 +515,6 @@ a:hover {
 
 .contact-info i::before {
   font-size: 0.8em;
-}
-
-.contact-info .fa-linkedin {
-  color: #0077B5;
-}
-
-.contact-info .fa-phone {
-  color: #007C00;
-}
-
-.contact-info .fa-envelope {
-  color: #ECC100;
 }
 
 .contact-info a:hover i {
@@ -464,7 +539,51 @@ a:hover {
   width: calc(100% - 25px);
 }
 
-/* Classes */
+/* contact */
+.contact > .content-body {
+  padding-bottom: 1rem;
+}
+
+/****************************************
+* Card
+****************************************/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.055);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-header,
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header {
+  height: 75px;
+  gap: 1rem;
+}
+
+.card-body {
+  height: 115px;
+  padding: 0 1rem;
+}
+
+.card-footer {
+  height: 30px;
+  margin: 0 auto;
+}
+
+.card .icon {
+  font-size: 40px;
+  margin: 0 auto;
+}
 
 .vl {
   height: 450px;
@@ -474,6 +593,8 @@ a:hover {
   margin: 0 20px;
 }
 
+
+
 /****************************************
 * Footer
 ****************************************/
@@ -481,10 +602,13 @@ a:hover {
 footer,
 footer ul {
   width: 1140px;
+  color: white;
 }
 
+footer .icon {
+  color: white;
+}
 
 footer.padding {
-  color: white;
   padding: 1rem 3rem 2.5rem 3rem;
 }
