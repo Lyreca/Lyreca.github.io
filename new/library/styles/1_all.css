@@ -980,11 +980,13 @@ nav li:last-child::after {
 .slider-button {
   position: absolute;
   top: 50%;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: opacity .1s ease-in;
+  width: 30px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.slider-button:active {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slider-button:hover {
@@ -993,19 +995,19 @@ nav li:last-child::after {
 }
 
 .slider-button.left {
-  left: -75px;
+  left: 0;
 }
 
 .slider-button.left-max {
-  left: -150px;
+  display: none;
 }
 
 .slider-button.right {
-  right:-75px;
+  right: 0;
 }
 
 .slider-button.right-max {
-  right:-150px;
+  display: none;
 }
 
 .slider-button i {
@@ -1094,8 +1096,8 @@ a:not(.button):hover {
 }
 
 /* Company and date */
-.company-and-date:nth-child(2) {
-  justify-items: flex-start;
+.company-and-date > h3:nth-child(2) {
+  justify-content: flex-start;
 }
 
 /* experience */

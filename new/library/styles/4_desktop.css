@@ -99,6 +99,37 @@ nav li::after {
 }
 
 /****************************************
+* Slider
+****************************************/
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: opacity .1s ease-in;
+}
+.slider-button.left-max {
+  display: flex;
+  left: -150px;
+}
+
+.slider-button.right {
+  right:-75px;
+}
+
+.slider-button.right-max {
+  display: flex;
+  right:-150px;
+}
+
+.slider-button i {
+  color: #007e75;
+}
+
+/****************************************
 * Slide
 ****************************************/
 
@@ -159,6 +190,7 @@ nav li::after {
 }
 
 /* contact */
+.education > .content,
 .contact > .content {
   height: 100%;
   overflow-y: hidden;
