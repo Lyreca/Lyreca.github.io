@@ -65,7 +65,7 @@
             </div>
             <div class="content-body">
               <p>
-                I am a <strong>Full-Stack Web Developer</strong> at <strong><a href="https://www.firstnetimpressions.com/" target="_blank">First Net Impressions</a></strong>. I work on both the front-end and the back-end of the development process, creating and designing websites for clients.
+                I am a <strong>Full-Stack Web Developer</strong> at <strong><a data-reference="experience">First Net Impressions</a></strong>. I work on both the front-end and the back-end of the development process, creating and designing websites for clients.
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@
           <div class="grid gap-0 content-body">
             <div class="content">
               <div class="grid col-2 content-title">
-                <h2 class="flex align-center">Full-Stack Web Developer</h2>
+                <h2 class="flex align-center">Full-Stack Web Developer<sub data-reference="contact">ref</sub></h2>
                 <h3 class="flex align-center justify-end"><strong><a href="https://www.firstnetimpressions.com/" target="_blank">First Net Impressions</a></strong>, May 2023 - Present</h3>
               </div>
               <div class="content-body">
@@ -105,7 +105,7 @@
             </div>
             <div class="content">
               <div class="grid col-2 content-title">
-                <h2 class="flex align-center">IT Front Desk Specialist</h2>
+                <h2 class="flex align-center">IT Front Desk Specialist<sub data-reference="contact">ref</sub></h2>
                 <h3 class="flex align-center justify-end"><strong><a href="https://www.liberty.edu/" target="_blank">Liberty University</a></strong>, Feb 2020 - May 2023</h3>
               </div>
               <div class="content-body">
@@ -342,10 +342,14 @@
     var slide_left_max = document.querySelector('.slider-button.left-max') || false;
     var slide_right_max = document.querySelector('.slider-button.right-max') || false;
     var nav_uls = document.querySelectorAll('nav > ul, .nav-buttons > ul') || [];
+    var container_width = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container').replace('px', ''));
+    console.log(container_width);
+    var reference_buttons = document.querySelectorAll('[data-reference]') || [];
 
     // Set class and width of slider
     slider.classList.add('col-' + slides.length);
-    slider.style.width = slides.length * 1140 + 'px';
+    var slider_width = slides.length * container_width + 'px';
+    slider.style.width = slider_width;
 
     //****************************************
     // Functions
@@ -356,7 +360,7 @@
       button.addEventListener('click', function(e)
       {
         e.preventDefault();
-        slider.scrollLeft = idx * 1140;
+        slider.scrollLeft = idx * container_width;
       })
     }
 
@@ -372,6 +376,7 @@
         var li = document.createElement('li');
         var a = document.createElement('a');
         a.innerHTML = slide.id;
+        a.dataset.section = slide.id;
         li.appendChild(a);
         ul.appendChild(li);
       })
@@ -390,6 +395,8 @@
       Handle_Navigation(button, idx);
     });
 
+    console.log(nav_buttons);
+
     //****************************************
     // Scrolling/Slider
     //****************************************
@@ -398,18 +405,14 @@
       slider.scrollLeft = 15;
     };
 
-    setTimeout(function() {
-      slider.scrollLeft = 1140 * 5;
-    }, 500);
-
     slide_left.addEventListener('click', function(e) 
     {
-      slider.scrollLeft -= 1140;
+      slider.scrollLeft -= container_width;
     })
 
     slide_right.addEventListener('click', function(e) 
     {
-      slider.scrollLeft += 1140;
+      slider.scrollLeft += container_width;
     })
 
     slide_left_max.addEventListener('click', function(e) 
@@ -419,8 +422,18 @@
 
     slide_right_max.addEventListener('click', function(e) 
     {
-      slider.scrollLeft = 1140 * 5;
+      slider.scrollLeft = container_width * 5;
     })
+
+    reference_buttons.forEach(function(button)
+    { 
+      button.addEventListener('click', function(e) 
+      {
+        e.preventDefault();
+        var nav_button = document.querySelector('[data-section="' + this.dataset.reference + '"]') || false;
+        nav_button.click();
+      })
+    });
 
     slider.addEventListener('scroll', function(e)
     {
@@ -429,7 +442,7 @@
         slider.scrollLeft = 15;
       }
 
-      var which = Math.floor((slider.scrollLeft) / 1140);
+      var which = Math.floor((slider.scrollLeft) / container_width);
       nav_buttons.forEach(function (button, idx)
       {
         if (idx === which)

@@ -146,10 +146,14 @@ a {
   user-select: none; /* Standard syntax */
 }
 
+.experience h2 sub,
+.about-me a,
 a[href]:not(.icon):not(.button) {
   color: #b1000d;
 }
 
+.experience h2 sub:hover,
+.about-me a:hover,
 a[href]:not(.icon):not(.button):hover {
   text-decoration: underline;
 }
@@ -478,7 +482,7 @@ a:not(.button):hover {
 ****************************************/
 
 .slide {
-  width: 1140px;
+  width: var(--container);
   max-height: 95%;
   scroll-snap-align: center;
   padding: 0 6rem;
@@ -543,10 +547,21 @@ a:not(.button):hover {
   width: calc(100% - 25px);
 }
 
+/* experience */
+.experience h2 sub {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* education */
+.contact > .content-body,
+.education > .content-body {
+  overflow: hidden;
+}
+
 /* contact */
 .contact > .content-body {
   padding-bottom: 1rem;
-  overflow: hidden;
 }
 
 .references p {
@@ -631,7 +646,7 @@ a:not(.button):hover {
 
 footer,
 footer ul {
-  width: 1140px;
+  width: var(--container);
   color: white;
 }
 
