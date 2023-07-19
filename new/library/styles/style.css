@@ -78,7 +78,7 @@ body {
 
 .hidden {
   display: none !important;
-  opacity: 0 !important;
+  opacity: 0;
 }
 
 a {
@@ -348,7 +348,7 @@ nav li:last-child::after {
   height: 50px;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.8);
-  transition: all .05s ease-out 0.2s;
+  transition: opacity .1s ease-in;
 }
 
 .slider-button:hover {
