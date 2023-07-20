@@ -248,6 +248,11 @@ a {
   user-select: none; /* Standard syntax */
 }
 
+p a {
+  -webkit-user-select: auto; /* Safari */
+  user-select: auto; /* Standard syntax */
+}
+
 .experience h2 sub,
 .about-me a,
 a[href]:not(.icon):not(.button) {
