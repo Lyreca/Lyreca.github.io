@@ -143,6 +143,10 @@ nav li::after {
   padding: 0 6rem;
 }
 
+.slide > .content {
+  overflow-y: hidden;
+}
+
 /****************************************
 * Specific Slides
 ****************************************/

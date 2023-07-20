@@ -22,7 +22,7 @@
 
 .nav-buttons {
   text-align: left;
-  padding-right: 150px;
+  padding-right: 125px;
 }
 
 .nav-buttons li {
@@ -50,11 +50,7 @@
 }
 
 .slide > .content-body {
-  max-height: calc(675px - 50px) /* Height of content-title */;
-}
-
-.slide > .content {
-  overflow-y: hidden;
+  max-height: calc(675px - 100px) /* Height of content-title */;
 }
 
 /****************************************
@@ -80,4 +76,9 @@
 /* skills */
 .skills > .content-body {
   text-align: left;
+}
+
+/* references */
+.references {
+  padding-bottom: 2.5px;
 }
