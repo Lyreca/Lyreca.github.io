@@ -23,9 +23,15 @@
   <script src="https://kit.fontawesome.com/1cf83d4dcb.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="overlay hidden" id="show-resume">
+    <div class="overlay-wrapper">
+      <p class="flex justify-end"><i class="fas fa-times close-overlay"></i></p>
+      <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://www.franssantoso.com/library/static/franssantoso_resume.docx' width='' height='90%'  frameborder='0'>This is an embedded <a target='_blank' href='http://office.com'>Microsoft Office</a> document, powered by <a target='_blank' href='http://office.com/webapps'>Office Online</a>.</iframe>
+    </div>
+  </div>
   <div class="container">
     <section class="header grid gap-0 align-center">
-      <a class="flex-column download icon" href="/library/static/franssantoso_resume.docx">
+      <a class="flex-column download icon" data-overlay="show-resume">
         <p><i class="fa-solid fa-file-word fa-2xl"></i></p>
         <p>Resume</p>
       </a>
@@ -355,8 +361,16 @@
   </footer>
 
   <!-- START JAVASCRIPT -->
+  <script src="/library/scripts/overlay_handler.js"></script>
   <script>
   (function () {
+
+    //****************************************
+    // Overlay
+    //****************************************
+
+    var overlay_handler = new Overlay_Handler();
+    overlay_handler.Initialize();
 
     //****************************************
     // Query Selectors
@@ -371,7 +385,7 @@
     var slide_right_max = document.querySelector('.slider-button.right-max') || false;
     var nav_uls = document.querySelectorAll('nav > ul, .nav-buttons > ul') || [];
     var reference_buttons = document.querySelectorAll('[data-reference]') || [];
-
+    var resume_preview = document.querySelector('iframe') || false;
 
     //****************************************
     // Functions
@@ -401,6 +415,17 @@
       slider.style.width = slider_width;
     }
 
+    function Set_Iframe_Width()
+    {
+      resume_preview.width = 80/100 * container_width() + 'px';
+    }
+
+    //****************************************
+    // Overlay
+    //****************************************
+    
+
+
     //****************************************
     // Navigation
     //****************************************
@@ -408,6 +433,7 @@
     // Set class and width of slider
     slider.classList.add('col-' + slides.length);
     Set_Slider_Width();
+    Set_Iframe_Width();
 
     // Add event listener for resize
     var on_resize;
@@ -415,6 +441,7 @@
     {
       clearTimeout(on_resize);
       on_resize = setTimeout(Set_Slider_Width, 100);
+      on_resize = setTimeout(Set_Iframe_Width, 100);
     });
 
     // Add Nav buttons from slide ids
