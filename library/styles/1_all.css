@@ -122,6 +122,7 @@ a.button {
 ****************************************/
 html,
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: #111111;
@@ -131,7 +132,15 @@ body {
   height: 100%;
   width: 100%;
   margin: 0px;
-  padding: 0px
+  padding: 0px;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
 }
 
 .container {
@@ -1062,6 +1071,7 @@ a:not(.button):hover {
 .slide > .content-body {
   max-height: 500px;
   overflow-y: scroll;
+  overscroll-behavior: auto;
   padding-right: 10px;
 }
 
@@ -1072,6 +1082,7 @@ a:not(.button):hover {
 /* about me */
 .slide > .content {
   overflow-y: scroll;
+  overscroll-behavior: auto;
   overflow-x: hidden;
   height: 60%;
 }
@@ -1130,6 +1141,7 @@ a:not(.button):hover {
 .contact > .content {
   height: 570px;
   overflow-y: scroll;
+  overscroll-behavior: auto;
   padding: 2.5px;
 }
 
