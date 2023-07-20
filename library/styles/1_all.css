@@ -1256,7 +1256,7 @@ footer.padding {
 }
 
 .download-resume {
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -1272,4 +1272,13 @@ footer.padding {
   background-color: white;
   padding: 20px 20px 20px 20px;
   z-index: 999;
+}
+
+.overlay-wrapper h3 {
+  font-size: 11px;
+}
+
+.overlay-wrapper iframe {
+  margin-top: 1rem;
+  align-self: center;
 }
