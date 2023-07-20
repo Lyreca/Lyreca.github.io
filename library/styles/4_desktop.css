@@ -247,3 +247,12 @@ nav li::after {
 footer.padding {
   padding: 1rem 3rem 2.5rem 3rem;
 }
+
+/****************************************
+* Overlay
+****************************************/
+
+.overlay-wrapper {
+  width: 1000px;
+  margin: 2rem auto;
+}

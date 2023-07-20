@@ -142,6 +142,14 @@ body {
 }
 
 /****************************************
+* No scrolling
+****************************************/
+
+.no-scrolling {
+  overflow: hidden !important;
+}
+
+/****************************************
 * Hidden
 ****************************************/
 
@@ -1247,9 +1255,20 @@ footer.padding {
   cursor: pointer;
 }
 
+.download-resume {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay-wrapper a[href].download-resume:hover,
+.overlay-wrapper a[href].download-resume i:hover {
+  color:rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
 .overlay-wrapper {
-  height: 80%;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   background-color: white;
   padding: 20px 20px 20px 20px;
   z-index: 999;
