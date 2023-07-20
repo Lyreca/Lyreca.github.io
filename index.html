@@ -24,10 +24,11 @@
 </head>
 <body>
   <div class="overlay hidden" id="show-resume" data-embed="franssantoso_resume.docx">
-    <div class="overlay-wrapper">
-      <div class="grid col-2">
-        <div class="flex"><a class="download-resume" href="https://www.franssantoso.com/library/static/franssantoso_resume.docx"><i class="fas fa-download"></i> Download</a></div>
-        <div class="flex justify-end"><i class="fas fa-times close-overlay"></i></div>
+    <div class="overlay-wrapper flex-column">
+      <div class="grid col-3">
+        <div class="flex align-center"><a class="download-resume" href="https://www.franssantoso.com/library/static/franssantoso_resume.docx"><i class="fas fa-download"></i> Download</a></div>
+        <h3 class="flex center-all"><strong>Resume Preview</strong></h3>
+        <div class="flex align-center justify-end"><i class="fas fa-times close-overlay"></i></div>
       </div>
     </div>
   </div>
@@ -439,12 +440,10 @@
     Set_Slider_Width();
 
     // Add event listener for resize
-    var on_resize;
     addEventListener('resize', function()
     {
-      clearTimeout(on_resize);
-      on_resize = setTimeout(Set_Slider_Width, 100);
-      on_resize = setTimeout(Set_Iframe_Width, 100);
+      Set_Slider_Width();
+      Set_Iframe_Width();
     });
 
     // Add Nav buttons from slide ids
