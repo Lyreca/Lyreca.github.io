@@ -140,28 +140,7 @@ nav li::after {
 ****************************************/
 
 .slide {
-  width: var(--container);
-  max-height: 95%;
-  scroll-snap-align: center;
   padding: 0 6rem;
-}
-
-.content-title + .content-body {
-  margin-top: 1rem;
-}
-
-.content-body + .content-title {
-  margin-top: 0.5rem;
-}
-
-.slide > .content-title {
-  padding-right: 10px;
-}
-
-.slide > .content-body {
-  max-height: 525px;
-  overflow-y: hidden;
-  padding-right: 10px;
 }
 
 /****************************************
@@ -169,10 +148,6 @@ nav li::after {
 ****************************************/
 
 /* about me */
-#about .content {
-  overflow: hidden;
-  height: 100%;
-}
 
 /* Picture Section */
 .picture-section.grid {
@@ -194,17 +169,7 @@ nav li::after {
 
 /* skills */
 
-.experience > .content-body,
-.skills > .content-body {
-  overflow-y: scroll;
-}
-
 /* contact */
-.education > .content,
-.contact > .content {
-  height: 100%;
-  overflow-y: hidden;
-}
 
 /* contact */
 .contact .card {

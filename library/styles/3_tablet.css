@@ -41,22 +41,31 @@
   font-size: 20px;
 }
 
+/****************************************
+* Slide
+****************************************/
+
+.slide > .content {
+  max-height: 675px;
+}
+
+.slide > .content-body {
+  max-height: calc(675px - 50px) /* Height of content-title */;
+}
+
+.slide > .content {
+  overflow-y: hidden;
+}
 
 /****************************************
 * Specific Slides
 ****************************************/
 
 /* about me */
-#about .content {
-  overflow: hidden;
-  height: 100%;
-}
+
 
 /* education */
-.education > .content {
-  height: 100%;
-  overflow-y: hidden;
-}
+
 
 /* contact */
 .contact .card {

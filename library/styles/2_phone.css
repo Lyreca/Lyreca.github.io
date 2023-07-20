@@ -56,10 +56,6 @@ nav li::after {
 ****************************************/
 
 /* about me */
-#about .content {
-  overflow-y: scroll;
-  height: 70%;
-}
 
 /* Company and date */
 .company-and-date > h3:nth-child(2) {

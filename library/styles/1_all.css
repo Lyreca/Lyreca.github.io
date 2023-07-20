@@ -1061,10 +1061,21 @@ a:not(.button):hover {
   padding-right: 10px;
 }
 
-.slide > .content-body {
-  max-height: 500px;
+.slide > .content-body,
+.slide > .content {
   overflow-y: scroll;
-  padding-right: 10px;
+  overflow-x: hidden;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.slide > .content {
+  max-height: 550px;
+}
+
+.slide > .content-body {
+  max-height: calc(550px - 50px) /* Height of content-title */;
 }
 
 /****************************************
@@ -1072,11 +1083,7 @@ a:not(.button):hover {
 ****************************************/
 
 /* about me */
-.slide > .content {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 60%;
-}
+
 
 /* Picture Section */
 .picture-section a {
@@ -1128,13 +1135,6 @@ a:not(.button):hover {
 }
 
 /* contact */
-
-.contact > .content {
-  height: 570px;
-  overflow-y: scroll;
-  padding: 2.5px;
-}
-
 .contact > .content-body {
   padding-bottom: 1rem;
 }
