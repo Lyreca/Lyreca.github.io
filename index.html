@@ -8,7 +8,7 @@
   <!-- Set View Size -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Stylesheets -->
-  <link href="/library/styles/destyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="/library/styles/destyle.css">
   <link rel="stylesheet" href="/library/styles/1_all.css">
   <link rel="stylesheet" href="/library/styles/2_phone.css" media="(min-width: 576px)">
   <link rel="stylesheet" href="/library/styles/3_tablet.css" media="(min-width: 768px)">
@@ -265,7 +265,8 @@
                 <h1>contact</h1>
               </div>
               <div class="content-body contact-me grid col-2--phone col-3--desktop gap-1">
-                <div class="card gap-1 center-all">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="franssantoso" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/franssantoso?trk=profile-badge">Frans Santoso</a></div>
+                <!-- <div class="card gap-1 center-all">
                   <div class="card-header icon linkedin">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
                   </div>
@@ -275,7 +276,7 @@
                   <div class="card-footer">
                     <a class="button linkedin" href="https://www.linkedin.com/in/frannssantoso" target="_blank">Connect</a>
                   </div>
-                </div>
+                </div> -->
                 <div class="card gap-1 center-all">
                   <div class="card-header icon github">
                     <i class="fa-brands fa-github fa-2xl"></i>
@@ -364,6 +365,7 @@
   </footer>
 
   <!-- START JAVASCRIPT -->
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
   <script src="/library/scripts/overlay_handler.js"></script>
   <script>
   (function() 
