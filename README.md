@@ -2,4 +2,4 @@
 
 Website for my resume/portfolio
 
-[Click here to check it out!](https://franssantoso.com/new/)
+[Click here to check it out!](https://franssantoso.com/)
