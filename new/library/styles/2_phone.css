@@ -1,0 +1,63 @@
+/****************************************
+* Header
+****************************************/
+
+.header {
+  height: 130px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header h2 {
+  font-size: 25px;
+}
+
+/****************************************
+* Fonts
+****************************************/
+
+.contact-info i::before {
+  font-size: 50px;
+}
+
+.picture-section a {
+  font-size: 25px;
+}
+
+/****************************************
+* Navigation
+****************************************/
+
+.navigation {
+  font-size: 18px;
+}
+
+nav li::after {
+  padding: 12px;
+}
+
+/****************************************
+* Slider
+****************************************/
+
+.slider-button {
+  width: 40px;
+  height: 80px;
+}
+
+/****************************************
+* Specific Slides
+****************************************/
+
+/* about me */
+#about .content {
+  overflow-y: scroll;
+  height: 70%;
+}
+
+/* Company and date */
+.company-and-date > h3:nth-child(2) {
+  justify-content: flex-end;
+}
