@@ -138,7 +138,7 @@ body {
 
 .container {
   z-index: 15;
-  margin: auto;
+  margin: 0 auto;
   width: var(--container);
   background-color: whitesmoke;
 }
