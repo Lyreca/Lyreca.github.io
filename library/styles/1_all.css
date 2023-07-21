@@ -1139,6 +1139,11 @@ a:not(.button):hover {
   padding-bottom: 1rem;
 }
 
+/* references */
+.references {
+  padding-bottom: 2.5px;
+}
+
 .references p {
   text-align: center;
 }
