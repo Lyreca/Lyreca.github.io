@@ -1043,6 +1043,10 @@ button:active {
   font-weight: normal;
 }
 
+button:disabled {
+  cursor: pointer;
+}
+
 /****************************************
 * Slide
 ****************************************/
