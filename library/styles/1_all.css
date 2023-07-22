@@ -1039,6 +1039,10 @@ button:hover {
   font-weight: bolder;
 }
 
+button:active {
+  font-weight: normal;
+}
+
 /****************************************
 * Slide
 ****************************************/
