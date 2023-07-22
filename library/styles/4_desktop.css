@@ -158,7 +158,7 @@ nav li::after {
   grid-template-columns: 1fr 0.1fr 1fr;
 }
 
-.picture-section a {
+.picture-section button {
   font-size: 1.8em;
 }
 

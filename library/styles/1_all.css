@@ -1005,6 +1005,7 @@ nav li:last-child::after {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.slider-button:disabled,
 .slider-button:hover {
   background-color: rgba(255, 255, 255, 0.4);
   font-weight: bolder;
@@ -1030,11 +1031,11 @@ nav li:last-child::after {
   color: #007e75;
 }
 
-a.on {
+button.on {
   font-weight: bolder;
 }
 
-a:not(.button):hover {
+button:hover {
   font-weight: bolder;
 }
 
@@ -1086,7 +1087,7 @@ a:not(.button):hover {
 
 
 /* Picture Section */
-.picture-section a {
+.picture-section button {
   font-size: 22px;
 }
 
@@ -1288,4 +1289,21 @@ footer.padding {
 .overlay-wrapper iframe {
   margin-top: 1rem;
   align-self: center;
+}
+
+.spinner {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 95%;
+  background-color: white;
+}
+
+.spinner p {
+  font-size: 2.5vh;
+}
+.spinner i {
+  font-size: 5vh;
 }

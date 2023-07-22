@@ -360,7 +360,13 @@
       button.addEventListener('click', function(e)
       {
         e.preventDefault();
-        slider.scrollLeft = idx * container_width();
+
+        if(!this.classList.contains('on'))
+        {
+          slider.scrollLeft = idx * container_width();
+          this.disabled = true;
+          setTimeout(() => {this.disabled = false}, 500);
+        }
       })
     }
 
@@ -405,16 +411,16 @@
       nav_uls.forEach(function(ul)
       {
         var li = document.createElement('li');
-        var a = document.createElement('a');
-        a.innerHTML = slide.id;
-        a.dataset.section = slide.id;
-        li.appendChild(a);
+        var button = document.createElement('button');
+        button.innerHTML = slide.id;
+        button.dataset.section = slide.id;
+        li.appendChild(button);
         ul.appendChild(li);
       })
     })
 
-    var nav_buttons = document.querySelectorAll('nav > ul > li > a');
-    var nav_buttons_2 = document.querySelectorAll('.nav-buttons > ul > li > a');
+    var nav_buttons = document.querySelectorAll('nav > ul > li > button');
+    var nav_buttons_2 = document.querySelectorAll('.nav-buttons > ul > li > button');
 
     nav_buttons.forEach(function(button, idx) 
     {
@@ -437,21 +443,29 @@
     slide_left.addEventListener('click', function(e) 
     {
       slider.scrollLeft -= container_width();
+      this.disabled = true;
+      setTimeout(() => {this.disabled = false}, 500);
     })
 
     slide_right.addEventListener('click', function(e) 
     {
       slider.scrollLeft += container_width();
+      this.disabled = true;
+      setTimeout(() => {this.disabled = false}, 500);
     })
 
     slide_left_max.addEventListener('click', function(e) 
     {
       slider.scrollLeft = 0;
+      this.disabled = true;
+      setTimeout(() => {this.disabled = false}, 500);
     })
 
     slide_right_max.addEventListener('click', function(e) 
     {
       slider.scrollLeft = container_width() * 5;
+      this.disabled = true;
+      setTimeout(() => {this.disabled = false}, 500);
     })
 
     reference_buttons.forEach(function(button)

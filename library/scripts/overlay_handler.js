@@ -96,8 +96,26 @@ var Overlay_Handler = (function()
     iframe.src = 'https://view.officeapps.live.com/op/embed.aspx?src=https://www.franssantoso.com/library/static/' + wrapper.parentNode.dataset.embed;
     iframe.width = wrapper.offsetWidth - 75 + 'px';
     iframe.height = '95%';
-
     wrapper.appendChild(iframe);
+
+    // Create spinner
+    var spinner = document.createElement('div');
+    var p = document.createElement('p');
+    var i = document.createElement('i');
+    spinner.classList.add('spinner', 'flex-column', 'center-all', 'gap-1');
+    p.innerHTML = 'Loading Resume...';
+    i.classList.add('fas', 'fa-spinner', 'fa-spin');
+    
+    // Append spinner
+    spinner.appendChild(p);
+    spinner.appendChild(i);
+    wrapper.appendChild(spinner);
+
+    // Listen for iframe load
+    iframe.addEventListener('load', function()
+    {
+      wrapper.removeChild(spinner);
+    });
   }
 
   // Return public interface
