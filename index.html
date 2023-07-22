@@ -385,7 +385,6 @@
       var resume_preview = document.querySelector('iframe') || false;
       if(resume_preview)
       {
-        console.log(resume_preview.parentNode.offsetWidth);
         resume_preview.width = resume_preview.parentNode.offsetWidth - 75 + 'px';
       }
     }
@@ -500,7 +499,7 @@
         slide_left_max.classList.add('hidden');
         slide_right_max.classList.remove('hidden');
       }
-      else if (which === 4)
+      else if (which === slides.length-1)
       {
         slide_right.classList.add('hidden');
         slide_left.classList.remove('hidden');
